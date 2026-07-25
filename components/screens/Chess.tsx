@@ -496,16 +496,17 @@ function Grid({ rows, cf, bounds, favorites, compare, hover, setHover, setTip, o
   let idx = 0;
   return (
     <div className="mk-scroll" style={{ position: 'relative' }}>
-      <div style={{ overflowX: 'auto', paddingBottom: 6 }}>
-        <div style={{ minWidth: 5 * 118 + 44 }}>
+      <div className="mk-board-scroll">
+        <div className="mk-board">
           {/* column headers */}
-          <div style={{ display: 'flex', gap: 8, marginBottom: 8, paddingLeft: 44 }}>
+          <div className="mk-board-row" style={{ marginBottom: 8 }}>
+            <div />
             {COLS.map((c, i) => (
-              <div key={i} className="mk-cellw" style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: hover?.c === i ? 'var(--blue)' : 'var(--mute)', transition: 'color .15s' }}>{c}</div>
+              <div key={i} style={{ textAlign: 'center', fontSize: 12, fontWeight: 700, color: hover?.c === i ? 'var(--blue)' : 'var(--mute)', transition: 'color .15s' }}>{c}</div>
             ))}
           </div>
           {rows.map((row: any) => (
-            <div key={row.floor} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
+            <div key={row.floor} className="mk-board-row">
               <div className="mk-floorcol" style={{ background: hover?.f === row.floor ? 'var(--blue-050)' : 'var(--soft)', color: hover?.f === row.floor ? 'var(--blue)' : 'var(--mute)' }}>{row.floor}</div>
               {row.cells.map((cell: Cell) => {
                 const match = cellMatches(cell, cf);
@@ -521,7 +522,7 @@ function Grid({ rows, cf, bounds, favorites, compare, hover, setHover, setTip, o
                 return (
                   <button
                     key={cell.id}
-                    className="mk-cellw mk-cell"
+                    className="mk-cell"
                     disabled={!clickable}
                     onMouseEnter={(e) => { setHover({ f: cell.f, c: cell.c }); if (match) setTip({ cell, x: e.clientX, y: e.clientY }); }}
                     onMouseMove={(e) => { if (match) setTip({ cell, x: e.clientX, y: e.clientY }); }}
@@ -531,10 +532,10 @@ function Grid({ rows, cf, bounds, favorites, compare, hover, setHover, setTip, o
                     onClick={() => clickable && onOpen(cell)}
                     title={`${cell.roomsLabel} · ${cell.area} m² · ${st.label}`}
                     style={{
-                      position: 'relative', height: 72, border: `1px solid ${st.color}`, background: cross && match ? mixTint(cell.status) : st.bg,
+                      position: 'relative', width: '100%', border: `1px solid ${st.color}`, background: cross && match ? mixTint(cell.status) : st.bg,
                       color: st.color, borderRadius: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 2,
                       cursor: clickable ? 'pointer' : 'not-allowed', opacity, transition: 'transform .15s ease, box-shadow .15s ease, background .15s ease',
-                      pointerEvents: match ? 'auto' : 'none', padding: '4px 6px',
+                      pointerEvents: match ? 'auto' : 'none', padding: '4px 4px',
                       animation: 'mk-fade .3s ease both', animationDelay: `${delay}ms`,
                     }}
                   >
@@ -572,12 +573,20 @@ function Grid({ rows, cf, bounds, favorites, compare, hover, setHover, setTip, o
       </div>
       <div className="mk-scroll-edge" />
       <style jsx>{`
-        .mk-cellw { width: 110px; flex-shrink: 0; }
+        .mk-board-scroll { overflow-x: auto; padding-bottom: 6px; }
+        .mk-board-row {
+          display: grid;
+          grid-template-columns: 30px repeat(5, 110px);
+          gap: 8px;
+          align-items: center;
+          margin-bottom: 6px;
+        }
         .mk-floorcol {
-          position: sticky; left: 0; z-index: 2; width: 30px; height: 72px; flex-shrink: 0;
+          position: sticky; left: 0; z-index: 2; align-self: stretch;
           display: flex; align-items: center; justify-content: center; border-radius: 8px;
           font-size: 12px; font-weight: 700; transition: all .15s ease;
         }
+        .mk-cell { height: 72px; }
         .mk-cell:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(15, 24, 38, 0.16); border-width: 1.5px; z-index: 1; }
         .mk-cell:hover .mk-cell-act { opacity: 1 !important; }
         .mk-cell-act { transition: opacity .15s ease, transform .15s ease; cursor: pointer; }
@@ -586,9 +595,13 @@ function Grid({ rows, cf, bounds, favorites, compare, hover, setHover, setTip, o
           position: absolute; top: 0; right: 0; bottom: 12px; width: 26px; pointer-events: none;
           background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.9));
         }
-        @media (max-width: 560px) {
-          .mk-cellw { width: 88px; }
-          .mk-cell { height: 64px !important; }
+        /* mobil: 5 ustun ham ekranga sig'adi — skroll yo'q */
+        @media (max-width: 640px) {
+          .mk-board-scroll { overflow-x: visible; }
+          .mk-board-row { grid-template-columns: 18px repeat(5, 1fr); gap: 5px; }
+          .mk-floorcol { font-size: 11px; }
+          .mk-cell { height: 62px; }
+          .mk-scroll-edge { display: none; }
         }
       `}</style>
     </div>
