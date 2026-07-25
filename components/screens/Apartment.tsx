@@ -49,9 +49,9 @@ export default function Apartment({ cell: apt }: { cell: Cell }) {
       <div className="mk-aptgrid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.5fr) minmax(min(100%,300px),1fr)', gap: 'clamp(24px,3vw,44px)', alignItems: 'start' }}>
         {/* plan + mini chess */}
         <div>
-          <div style={{ position: 'relative', background: '#0A1220', border: '1px solid var(--line)', borderRadius: 18, overflow: 'hidden', aspectRatio: '4/3' }}>
+          <div style={{ position: 'relative', background: '#fff', border: '1px solid var(--line)', borderRadius: 18, overflow: 'hidden', aspectRatio: '4/3' }}>
             <Image src="/img/plan-1.png" alt={`${apt.roomsLabel} planirovka`} fill sizes="(max-width:820px) 100vw, 55vw" style={{ objectFit: 'contain', padding: 10 }} />
-            <span style={{ position: 'absolute', left: 12, top: 12, background: 'rgba(255,255,255,.9)', color: 'var(--ink)', fontSize: 12, fontWeight: 700, padding: '5px 11px', borderRadius: 20 }}>Planirovka · {apt.area} m²</span>
+            <span style={{ position: 'absolute', left: 12, top: 12, background: 'var(--soft)', border: '1px solid var(--line)', color: 'var(--ink)', fontSize: 12, fontWeight: 700, padding: '5px 11px', borderRadius: 20 }}>Planirovka · {apt.area} m²</span>
           </div>
           <div style={{ marginTop: 20, background: '#fff', border: '1px solid var(--line)', borderRadius: 16, padding: 18 }}>
             <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--ink)', marginBottom: 12 }}>Qavatdagi o‘rni</div>
