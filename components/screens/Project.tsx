@@ -35,7 +35,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
       </div>
 
       {/* hero */}
-      <div style={{ position: 'relative', width: '100%', height: 'clamp(460px,80vh,880px)', overflow: 'hidden', background: '#0A1220' }}>
+      <div style={{ position: 'relative', width: '100%', height: 'clamp(300px,52vh,660px)', overflow: 'hidden', background: '#0A1220' }}>
         {g.map((src, i) => (
           <div key={i} style={{ position: 'absolute', inset: 0, opacity: i === pj ? 1 : 0, transition: 'opacity .8s ease' }}>
             <Image src={src} alt={p.name} fill sizes="100vw" priority={i === 0} style={{ objectFit: 'cover' }} />
