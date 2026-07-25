@@ -1,0 +1,124 @@
+/* ==========================================================================
+   KARVON STROY — design tokens & base. Ported verbatim from the design
+   bundle. Fonts (Golos Text body / Manrope headings) load via next/font and
+   are exposed as --font-golos / --font-manrope (see app/layout.tsx).
+   ========================================================================== */
+
+:root {
+  --blue: #0060fe;
+  --blue-600: #0050d6;
+  --blue-050: #eaf1ff;
+  --blue-100: #d6e4ff;
+  --ink: #0f1826;
+  --slate: #5a6577;
+  --mute: #8b93a3;
+  --line: #e6eaf1;
+  --bg: #ffffff;
+  --soft: #f4f6fa;
+  --free: #17b26a;
+  --free-bg: #e7f8f0;
+  --free-ln: #9fe3c4;
+  --busy: #e8901a;
+  --busy-bg: #fdf3e3;
+  --busy-ln: #f6d19b;
+  --sold: #9aa1ad;
+  --sold-bg: #f0f2f6;
+  --sold-ln: #d7dbe3;
+  --shadow: 0 6px 24px rgba(15, 24, 38, 0.07);
+  --shadow-sm: 0 2px 10px rgba(15, 24, 38, 0.06);
+  --header-h: 112px; /* utility bar + main bar — used by sticky asides */
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-golos), system-ui, sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+}
+/* media never overflows its container on small screens */
+img,
+svg,
+video {
+  max-width: 100%;
+}
+a {
+  color: var(--blue);
+  text-decoration: none;
+}
+a:hover {
+  color: var(--blue-600);
+}
+::selection {
+  background: var(--blue);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+input[type='range'] {
+  accent-color: var(--blue);
+  height: 6px;
+  cursor: pointer;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-manrope), sans-serif;
+}
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d3d9e4;
+  border-radius: 8px;
+}
+
+@keyframes mk-fade {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* screen enter animation */
+.mk-screen {
+  animation: mk-fade 0.5s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

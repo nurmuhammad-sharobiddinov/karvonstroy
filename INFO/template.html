@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="34c0e6ab-cf8f-4a8b-b07e-c580d699e825"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3081f4a3-48cb-4817-9ec2-113ba0246d65") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("c0288fef-2a34-47b4-a753-6e01da2b1026") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("72e4d438-86bf-4435-a432-1d2c75c33ee1") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e22c40b0-f425-428e-a034-86be63ecee1d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3081f4a3-48cb-4817-9ec2-113ba0246d65") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("c0288fef-2a34-47b4-a753-6e01da2b1026") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("72e4d438-86bf-4435-a432-1d2c75c33ee1") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e22c40b0-f425-428e-a034-86be63ecee1d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3081f4a3-48cb-4817-9ec2-113ba0246d65") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("c0288fef-2a34-47b4-a753-6e01da2b1026") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("72e4d438-86bf-4435-a432-1d2c75c33ee1") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e22c40b0-f425-428e-a034-86be63ecee1d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3081f4a3-48cb-4817-9ec2-113ba0246d65") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("c0288fef-2a34-47b4-a753-6e01da2b1026") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("72e4d438-86bf-4435-a432-1d2c75c33ee1") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e22c40b0-f425-428e-a034-86be63ecee1d") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("64f326dc-38d4-4da5-83a6-f384d0380547") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("1b7728f7-572d-4751-bf03-327ed847b627") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("7df2746f-0d45-4f9c-b749-9f52ba22a86c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("d77ab9c0-54e9-4632-ab03-237a06b6bc79") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("e629f011-a93e-40f3-b926-753ccf330a83") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("64f326dc-38d4-4da5-83a6-f384d0380547") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("1b7728f7-572d-4751-bf03-327ed847b627") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("7df2746f-0d45-4f9c-b749-9f52ba22a86c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("d77ab9c0-54e9-4632-ab03-237a06b6bc79") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("e629f011-a93e-40f3-b926-753ccf330a83") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("64f326dc-38d4-4da5-83a6-f384d0380547") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("1b7728f7-572d-4751-bf03-327ed847b627") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("7df2746f-0d45-4f9c-b749-9f52ba22a86c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("d77ab9c0-54e9-4632-ab03-237a06b6bc79") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("e629f011-a93e-40f3-b926-753ccf330a83") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("64f326dc-38d4-4da5-83a6-f384d0380547") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("1b7728f7-572d-4751-bf03-327ed847b627") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("7df2746f-0d45-4f9c-b749-9f52ba22a86c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("d77ab9c0-54e9-4632-ab03-237a06b6bc79") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("e629f011-a93e-40f3-b926-753ccf330a83") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("64f326dc-38d4-4da5-83a6-f384d0380547") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("1b7728f7-572d-4751-bf03-327ed847b627") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("7df2746f-0d45-4f9c-b749-9f52ba22a86c") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("d77ab9c0-54e9-4632-ab03-237a06b6bc79") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("e629f011-a93e-40f3-b926-753ccf330a83") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<script src="db272854-3a96-4d88-b012-95043bcd7b13"></script>
+<style>
+  :root{
+    --blue:#0060FE; --blue-600:#0050D6; --blue-050:#EAF1FF; --blue-100:#D6E4FF;
+    --ink:#0F1826; --slate:#5A6577; --mute:#8B93A3; --line:#E6EAF1; --bg:#FFFFFF; --soft:#F4F6FA;
+    --free:#17B26A; --free-bg:#E7F8F0; --free-ln:#9FE3C4;
+    --busy:#E8901A; --busy-bg:#FDF3E3; --busy-ln:#F6D19B;
+    --sold:#9AA1AD; --sold-bg:#F0F2F6; --sold-ln:#D7DBE3;
+    --shadow:0 6px 24px rgba(15,24,38,.07); --shadow-sm:0 2px 10px rgba(15,24,38,.06);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:'Golos Text',system-ui,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;}
+  a{color:var(--blue);text-decoration:none;}
+  a:hover{color:var(--blue-600);}
+  ::selection{background:var(--blue);color:#fff;}
+  input,textarea,select,button{font-family:inherit;}
+  input[type=range]{accent-color:var(--blue);height:4px;}
+  h1,h2,h3,h4{font-family:'Manrope',sans-serif;}
+  ::-webkit-scrollbar{height:10px;width:10px;}
+  ::-webkit-scrollbar-thumb{background:#D3D9E4;border-radius:8px;}
+  @keyframes mk-fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+</style>
+
+</helmet>
+
+<div id="mk-root" style="min-height:100vh;display:flex;flex-direction:column;background:var(--bg);">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:60;background:rgba(255,255,255,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);">
+    <div style="max-width:1320px;margin:0 auto;padding:8px clamp(14px,3vw,32px);display:flex;align-items:center;justify-content:space-between;font-size:13px;color:var(--slate);border-bottom:1px solid var(--line);">
+      <div style="display:flex;align-items:center;gap:8px;"><span style="color:var(--blue);">◉</span> Toshkent shahri</div>
+      <div style="display:flex;align-items:center;gap:clamp(12px,2vw,22px);">
+        <div style="display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;" data-langbar="">
+          <button data-lang="uz" style="border:none;background:var(--blue);color:#fff;font-size:12px;font-weight:600;padding:5px 11px;cursor:pointer;">UZ</button>
+          <button data-lang="ru" style="border:none;background:transparent;color:var(--slate);font-size:12px;font-weight:600;padding:5px 11px;cursor:pointer;">RU</button>
+        </div>
+        <a href="tel:1360" style="font-family:'Manrope';font-weight:700;color:var(--ink);font-size:15px;">☎ 1360</a>
+        <button data-nav="online" style="border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13px;font-weight:600;padding:7px 14px;border-radius:8px;cursor:pointer;" data-ru="Вход">Kirish</button>
+      </div>
+    </div>
+    <div style="max-width:1320px;margin:0 auto;padding:14px clamp(14px,3vw,32px);display:flex;align-items:center;justify-content:space-between;gap:20px;">
+      <button data-nav="home" style="display:flex;align-items:center;gap:10px;border:none;background:none;cursor:pointer;padding:0;">
+        <img src="15ec1d24-c51b-4d19-9a00-5d076d453e75" alt="Karvon Stroy" style="width:40px;height:40px;display:block;">
+        <span style="font-family:'Manrope';font-weight:800;font-size:22px;letter-spacing:-.02em;color:var(--ink);">KARVON<span style="color:var(--blue);"> STROY</span></span>
+      </button>
+      <nav data-navlinks="" style="display:flex;align-items:center;gap:clamp(10px,1.6vw,26px);">
+        <button data-nav="catalog" style="border:none;background:none;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;" data-ru="Проекты">Loyihalar</button>
+        <button data-nav="mortgage" style="border:none;background:none;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;" data-ru="Ипотека">Ipoteka</button>
+        <button data-nav="catalog" style="border:none;background:none;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;" data-ru="Коммерция">Kommersiya</button>
+        <button data-nav="catalog" style="border:none;background:none;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;" data-ru="Акции">Aksiyalar</button>
+        <button data-nav="catalog" style="border:none;background:none;font-size:14.5px;font-weight:500;color:var(--ink);cursor:pointer;" data-ru="Новости">Yangiliklar</button>
+      </nav>
+      <button data-nav="catalog" style="border:none;background:var(--blue);color:#fff;font-size:14px;font-weight:600;padding:11px 20px;border-radius:10px;cursor:pointer;box-shadow:var(--shadow-sm);" data-ru="Выбрать квартиру">Kvartira tanlash</button>
+      <button data-burger="" style="display:none;border:1px solid var(--line);background:#fff;border-radius:9px;width:42px;height:42px;font-size:18px;cursor:pointer;">☰</button>
+    </div>
+    <div data-mobmenu="" style="display:none;flex-direction:column;padding:8px clamp(14px,3vw,32px) 16px;border-top:1px solid var(--line);gap:2px;">
+      <button data-nav="catalog" style="text-align:left;border:none;background:none;font-size:15px;font-weight:500;color:var(--ink);padding:11px 0;cursor:pointer;">Loyihalar</button>
+      <button data-nav="mortgage" style="text-align:left;border:none;background:none;font-size:15px;font-weight:500;color:var(--ink);padding:11px 0;cursor:pointer;">Ipoteka</button>
+      <button data-nav="online" style="text-align:left;border:none;background:none;font-size:15px;font-weight:500;color:var(--ink);padding:11px 0;cursor:pointer;">Online xarid</button>
+      <button data-nav="catalog" style="margin-top:6px;border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:13px 0;border-radius:10px;cursor:pointer;">Kvartira tanlash</button>
+    </div>
+  </header>
+
+  <main data-main="" style="flex:1;">
+
+    <!-- ==================== HOME ==================== -->
+    <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+    <section>
+      <!-- HERO — IMAGE CAROUSEL (uploaded images only, no text) -->
+      <div data-hero="" style="position:relative;width:100%;height:clamp(300px,54vw,720px);max-height:86vh;overflow:hidden;background:#0A1220;">
+        <div data-hero-track="" style="position:absolute;inset:0;">
+          <div data-hero-slide="0" style="position:absolute;inset:0;opacity:1;transition:opacity 1s ease;"><img src="398ba697-fbc2-4576-ae76-e5a4a91ab9fe" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div data-hero-slide="1" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;"><img src="1e1c14da-4fc1-4fe9-86f6-49a047dd8faa" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div data-hero-slide="2" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;"><img src="3170141b-f68a-4246-ba9c-949e0f9dbf0e" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div data-hero-slide="3" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;"><img src="78c8dfa9-e313-4cab-9151-171bfd56b6df" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+          <div data-hero-slide="4" style="position:absolute;inset:0;opacity:0;transition:opacity 1s ease;"><img src="f8aa6c3e-c1c8-489e-85a5-48220d7c44b3" alt="" style="width:100%;height:100%;object-fit:cover;display:block;"></div>
+        </div>
+        <button data-hero-prev="" style="position:absolute;left:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.82);backdrop-filter:blur(6px);color:var(--ink);font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;transition:background .2s ease;">‹</button>
+        <button data-hero-next="" style="position:absolute;right:clamp(12px,2vw,28px);top:50%;transform:translateY(-50%);width:46px;height:46px;border-radius:50%;border:none;background:rgba(255,255,255,.82);backdrop-filter:blur(6px);color:var(--ink);font-size:18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.15);display:flex;align-items:center;justify-content:center;transition:background .2s ease;">›</button>
+        <div style="position:absolute;left:0;right:0;bottom:clamp(16px,3vh,28px);display:flex;gap:10px;align-items:center;justify-content:center;" data-hero-dots=""></div>
+      </div>
+
+      <!-- PROJECTS (moved above About) -->
+      <div style="max-width:1320px;margin:0 auto;padding:clamp(50px,7vw,100px) clamp(14px,3vw,32px) clamp(30px,4vw,50px);">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,4vw,44px);flex-wrap:wrap;">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="width:28px;height:2px;background:var(--blue);"></span><span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);">Portfel</span></div>
+            <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);letter-spacing:-.025em;margin:0;color:var(--ink);">Bizning loyihalar</h2>
+          </div>
+          <button data-nav="catalog" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:14px;font-weight:600;padding:13px 20px;border-radius:11px;cursor:pointer;transition:all .2s ease;" style-hover="border-color:var(--blue);color:var(--blue)">Barcha loyihalar <span>→</span></button>
+        </div>
+        <!-- SEARCH + FILTER -->
+        <div style="background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-sm);padding:clamp(16px,2vw,22px);margin-bottom:clamp(22px,3vw,32px);">
+          <div style="display:flex;gap:14px;flex-wrap:wrap;align-items:center;">
+            <div style="flex:1;min-width:220px;display:flex;align-items:center;gap:10px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:0 14px;">
+              <span style="color:var(--mute);font-size:16px;">⌕</span>
+              <input type="text" data-hsearch="" placeholder="Loyiha yoki tuman bo'yicha qidirish…" style="flex:1;border:none;background:transparent;padding:13px 0;font-size:15px;outline:none;color:var(--ink);">
+            </div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;" data-hclsbar="">
+              <sc-for list="{{ homeClsOpts }}" as="o" hint-placeholder-count="4"><button sc-camel-on-click="{{ o.onClick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+            </div>
+          </div>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <span style="font-size:13px;font-weight:600;color:var(--slate);">Xonalar:</span>
+              <div style="display:flex;gap:6px;flex-wrap:wrap;" data-hroombar="">
+                <sc-for list="{{ homeRoomOpts }}" as="o" hint-placeholder-count="6"><button sc-camel-on-click="{{ o.onClick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;gap:12px;flex:1;min-width:220px;">
+              <span style="font-size:13px;font-weight:600;color:var(--slate);white-space:nowrap;">Narx, mln so'mgacha:</span>
+              <input type="range" data-hprice="" min="300" max="1500" step="20" value="1500" style="flex:1;min-width:120px;">
+              <span style="font-size:14px;font-weight:700;color:var(--blue);min-width:64px;">{{ homePriceLabel }}</span>
+            </div>
+            <button sc-camel-on-click="{{ homeResetFilters }}" style="border:1px solid var(--line);background:#fff;color:var(--slate);font-size:13px;font-weight:600;padding:10px 16px;border-radius:10px;cursor:pointer;white-space:nowrap;">Tozalash</button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:8px;">
+          <div style="font-size:14px;color:var(--slate);"><b style="color:var(--ink);">{{ homeResultCount }}</b> ta loyiha topildi</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:clamp(16px,1.6vw,24px);">
+          <sc-for list="{{ homeProjects }}" as="p" hint-placeholder-count="3">
+            <div data-card="" style="display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden;transition:all .3s cubic-bezier(.16,1,.3,1);" style-hover="box-shadow:0 28px 64px rgba(15,24,38,.16);transform:translateY(-6px);border-color:transparent">
+              <div sc-camel-on-click="{{ p.open }}" style="position:relative;aspect-ratio:16/12;overflow:hidden;background:var(--soft);cursor:pointer;">
+                <div data-cardimg="" style="position:absolute;inset:0;transition:transform .8s cubic-bezier(.16,1,.3,1);">{{ p.imgEl }}</div>
+                <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,18,32,.32),transparent 34%,transparent 68%,rgba(10,18,32,.5));pointer-events:none;"></div>
+                <div style="position:absolute;top:14px;left:14px;right:14px;display:flex;align-items:center;justify-content:space-between;gap:8px;">
+                  <span style="display:inline-flex;align-items:center;gap:6px;white-space:nowrap;background:{{ p.statusBg }};color:{{ p.statusColor }};font-size:11.5px;font-weight:700;padding:6px 11px;border-radius:8px;"><span style="width:6px;height:6px;border-radius:50%;background:{{ p.statusColor }};flex-shrink:0;"></span>{{ p.statusLabel }}</span>
+                  <span style="background:rgba(15,24,38,.55);backdrop-filter:blur(6px);color:#fff;font-size:11.5px;font-weight:700;padding:6px 11px;border-radius:8px;">{{ p.cls }}</span>
+                </div>
+                <div style="position:absolute;left:16px;bottom:14px;right:16px;">
+                  <div style="font-family:'Manrope';font-weight:800;font-size:23px;letter-spacing:-.01em;color:#fff;line-height:1.1;text-shadow:0 2px 12px rgba(0,0,0,.4);">{{ p.name }}</div>
+                  <div style="font-size:13px;color:rgba(255,255,255,.85);margin-top:5px;display:flex;align-items:center;gap:5px;"><span>◉</span>{{ p.address }}</div>
+                </div>
+              </div>
+              <div style="padding:18px 20px 20px;display:flex;flex-direction:column;flex:1;">
+                <div style="display:flex;align-items:stretch;text-align:center;background:var(--soft);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-bottom:16px;">
+                  <div style="flex:1;padding:11px 6px;"><div style="font-size:11px;color:var(--mute);margin-bottom:3px;">Narxi</div><div style="font-family:'Manrope';font-weight:700;font-size:14.5px;color:var(--blue);white-space:nowrap;">{{ p.priceFrom }} mln</div></div>
+                  <div style="width:1px;background:var(--line);"></div>
+                  <div style="flex:1;padding:11px 6px;"><div style="font-size:11px;color:var(--mute);margin-bottom:3px;">Qavatlar</div><div style="font-family:'Manrope';font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;">{{ p.floorsLabel }}</div></div>
+                  <div style="width:1px;background:var(--line);"></div>
+                  <div style="flex:1;padding:11px 6px;"><div style="font-size:11px;color:var(--mute);margin-bottom:3px;">Topshirish</div><div style="font-family:'Manrope';font-weight:700;font-size:14.5px;color:var(--ink);white-space:nowrap;">{{ p.deadline }}</div></div>
+                </div>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:16px;">
+                  <span style="background:var(--blue-050);color:var(--blue);font-size:12px;font-weight:600;padding:5px 10px;border-radius:7px;">Studiya–4 xona</span>
+                  <span style="background:#E7F8F0;color:var(--free);font-size:12px;font-weight:600;padding:5px 10px;border-radius:7px;">{{ p.freeCount }} ta bo'sh</span>
+                </div>
+                <div style="display:flex;gap:10px;margin-top:auto;">
+                  <button sc-camel-on-click="{{ p.open }}" style="flex:1;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:13.5px;font-weight:600;padding:12px;border-radius:11px;cursor:pointer;transition:all .2s ease;" style-hover="border-color:var(--blue);color:var(--blue)">Batafsil</button>
+                  <button sc-camel-on-click="{{ p.openChess }}" style="flex:1;border:none;background:var(--blue);color:#fff;font-size:13.5px;font-weight:600;padding:12px;border-radius:11px;cursor:pointer;box-shadow:0 6px 18px rgba(0,96,254,.25);">Shaxmatka</button>
+                </div>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <!-- ABOUT + STATS (moved below Projects) -->
+      <div style="background:var(--ink);color:#fff;overflow:hidden;">
+        <div style="max-width:1320px;margin:0 auto;padding:clamp(50px,7vw,100px) clamp(14px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(32px,5vw,72px);align-items:center;">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;"><span style="width:28px;height:2px;background:var(--blue);"></span><span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#7FA9FF;">Kompaniya haqida</span></div>
+            <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,48px);line-height:1.08;letter-spacing:-.025em;margin:0 0 22px;color:#fff;">Biz uy emas — hayot uchun <span style="color:#7FA9FF;">makon</span> quramiz</h2>
+            <p style="font-size:16.5px;line-height:1.75;color:rgba(255,255,255,.66);margin:0 0 32px;max-width:52ch;">KARVON STROY — O'zbekistonda zamonaviy turar-joy majmualarini quruvchi kompaniya. Loyihalashdan kalit topshirishgacha bo'lgan har bir bosqichda sifat, muddat va mijoz ishonchini birinchi o'ringa qo'yamiz.</p>
+            <div style="display:flex;gap:14px;flex-wrap:wrap;">
+              <button data-nav="catalog" style="border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:15px 28px;border-radius:12px;cursor:pointer;box-shadow:0 10px 30px rgba(0,96,254,.35);">Loyihalarni ko'rish</button>
+              <button data-nav="online" style="border:1px solid rgba(255,255,255,.24);background:rgba(255,255,255,.05);color:#fff;font-size:15px;font-weight:600;padding:15px 26px;border-radius:12px;cursor:pointer;">Biz haqimizda</button>
+            </div>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.1);border-radius:20px;overflow:hidden;">
+            <div style="background:#131E30;padding:clamp(22px,3vw,34px);"><div style="font-family:'Manrope';font-weight:800;font-size:clamp(34px,4vw,52px);color:#fff;line-height:1;">6</div><div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:10px;">yil bozorda</div></div>
+            <div style="background:#131E30;padding:clamp(22px,3vw,34px);"><div style="font-family:'Manrope';font-weight:800;font-size:clamp(34px,4vw,52px);color:#fff;line-height:1;">47</div><div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:10px;">loyiha</div></div>
+            <div style="background:#131E30;padding:clamp(22px,3vw,34px);"><div style="font-family:'Manrope';font-weight:800;font-size:clamp(34px,4vw,52px);color:#fff;line-height:1;">560<span style="font-size:22px;color:#7FA9FF;"> ming</span></div><div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:10px;">m² qurilgan</div></div>
+            <div style="background:#131E30;padding:clamp(22px,3vw,34px);"><div style="font-family:'Manrope';font-weight:800;font-size:clamp(34px,4vw,52px);color:#fff;line-height:1;">6248</div><div style="font-size:14px;color:rgba(255,255,255,.55);margin-top:10px;">baxtli oila</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NEWS (before Contacts) -->
+      <div style="max-width:1320px;margin:0 auto;padding:clamp(50px,7vw,100px) clamp(14px,3vw,32px);">
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:clamp(28px,4vw,44px);flex-wrap:wrap;">
+          <div>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="width:28px;height:2px;background:var(--blue);"></span><span style="font-size:12.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);">Media markaz</span></div>
+            <h2 style="font-weight:800;font-size:clamp(28px,3.6vw,46px);letter-spacing:-.025em;margin:0;color:var(--ink);">Yangiliklar</h2>
+          </div>
+          <button data-nav="online" style="display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:14px;font-weight:600;padding:13px 20px;border-radius:11px;cursor:pointer;" style-hover="border-color:var(--blue);color:var(--blue)">Barcha yangiliklar <span>→</span></button>
+        </div>
+        <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:clamp(16px,2vw,26px);align-items:stretch;" data-newsgrid="">
+          <sc-for list="{{ featuredNews }}" as="n" hint-placeholder-count="1">
+            <div sc-camel-on-click="{{ n.open }}" data-card="" style="position:relative;border-radius:22px;overflow:hidden;cursor:pointer;min-height:340px;background:#0A1220;transition:all .28s cubic-bezier(.16,1,.3,1);" style-hover="box-shadow:0 24px 60px rgba(15,24,38,.16);transform:translateY(-4px)">
+              <div data-cardimg="" style="position:absolute;inset:0;transition:transform .7s cubic-bezier(.16,1,.3,1);">{{ n.imgEl }}</div>
+              <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,13,26,.88),rgba(6,13,26,.15) 55%,transparent);"></div>
+              <div style="position:absolute;left:0;right:0;bottom:0;padding:clamp(24px,3vw,38px);">
+                <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="background:var(--blue);color:#fff;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 11px;border-radius:6px;">{{ n.cat }}</span><span style="color:rgba(255,255,255,.7);font-size:13px;">{{ n.date }}</span></div>
+                <h3 style="font-family:'Manrope';font-weight:800;font-size:clamp(22px,2.6vw,32px);line-height:1.12;letter-spacing:-.02em;margin:0 0 10px;color:#fff;max-width:20ch;">{{ n.title }}</h3>
+                <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,.72);margin:0;max-width:48ch;">{{ n.excerpt }}</p>
+              </div>
+            </div>
+          </sc-for>
+          <div style="display:flex;flex-direction:column;gap:clamp(16px,2vw,26px);" data-newsside="">
+            <sc-for list="{{ sideNews }}" as="n" hint-placeholder-count="2">
+              <div sc-camel-on-click="{{ n.open }}" data-card="" style="display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;flex:1;transition:all .24s ease;" style-hover="border-color:var(--blue-100);box-shadow:var(--shadow)">
+                <div style="position:relative;width:42%;min-width:120px;overflow:hidden;background:var(--soft);"><div data-cardimg="" style="position:absolute;inset:0;transition:transform .6s ease;">{{ n.imgEl }}</div></div>
+                <div style="padding:16px 16px 16px 0;display:flex;flex-direction:column;justify-content:center;flex:1;">
+                  <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;"><span style="color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;">{{ n.cat }}</span><span style="color:var(--mute);font-size:12px;">{{ n.date }}</span></div>
+                  <h3 style="font-family:'Manrope';font-weight:700;font-size:16.5px;line-height:1.25;letter-spacing:-.01em;margin:0;color:var(--ink);">{{ n.title }}</h3>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTS + MAP -->
+      <div style="background:var(--ink);color:#fff;">
+        <div style="max-width:1320px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(14px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:center;">
+          <div>
+            <h2 style="font-weight:800;font-size:clamp(24px,3vw,38px);margin:0 0 18px;">Sotuv bo'limiga tashrif buyuring</h2>
+            <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);margin:0 0 26px;max-width:44ch;">Mutaxassislarimiz sizga eng mos kvartirani tanlashda yordam beradi. Har kuni 9:00–19:00.</p>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--blue);">◉</span><div><div style="font-weight:600;">Bosh ofis</div><div style="color:rgba(255,255,255,.6);font-size:14px;">Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108</div></div></div>
+              <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--blue);">☎</span><div><div style="font-weight:600;">Call-markaz</div><div style="color:rgba(255,255,255,.6);font-size:14px;">1360 · +998 71 200 13 60</div></div></div>
+            </div>
+            <button data-nav="online" style="margin-top:26px;border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:14px 26px;border-radius:11px;cursor:pointer;">Qo'ng'iroqqa buyurtma</button>
+          </div>
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/11;border:1px solid rgba(255,255,255,.12);">
+            <image-slot id="mk-map" shape="rect" placeholder="Interaktiv xarita (Google Maps / Yandex)"></image-slot>
+            <div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);color:var(--blue);font-size:34px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));">◉</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== CATALOG ==================== -->
+    <sc-if value="{{ isCatalog }}">
+    <section style="max-width:1320px;margin:0 auto;padding:clamp(22px,3vw,40px) clamp(14px,3vw,32px);animation:mk-fade .4s ease;">
+      <div style="font-size:13px;color:var(--mute);margin-bottom:10px;"><button data-nav="home" style="border:none;background:none;color:var(--mute);cursor:pointer;padding:0;font-size:13px;">Bosh sahifa</button> / Loyihalar katalogi</div>
+      <h1 style="font-weight:800;font-size:clamp(26px,3.4vw,42px);letter-spacing:-.02em;margin:0 0 22px;color:var(--ink);">Loyihalar katalogi</h1>
+      <!-- filters -->
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:14px;margin-bottom:24px;" data-catfilter="">
+        <sc-for list="{{ catClassOpts }}" as="o" hint-placeholder-count="4"><button sc-camel-on-click="{{ o.onClick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+        <span style="width:1px;height:26px;background:var(--line);margin:0 4px;"></span>
+        <sc-for list="{{ catStatusOpts }}" as="o" hint-placeholder-count="4"><button sc-camel-on-click="{{ o.onClick }}" style="{{ o.style }}">{{ o.label }}</button></sc-for>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px;">
+        <sc-for list="{{ catalogProjects }}" as="p" hint-placeholder-count="3">
+          <div sc-camel-on-click="{{ p.open }}" style="background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:var(--shadow-sm);transition:all .2s ease;" style-hover="box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--blue-100)">
+            <div style="position:relative;aspect-ratio:16/11;overflow:hidden;">
+              <image-slot id="{{ p.slotCat }}" shape="rect" placeholder="{{ p.name }}"></image-slot>
+              <span style="position:absolute;top:12px;left:12px;background:{{ p.statusBg }};color:{{ p.statusColor }};font-size:12px;font-weight:600;padding:6px 11px;border-radius:20px;">{{ p.statusLabel }}</span>
+              <span style="position:absolute;top:12px;right:12px;background:rgba(255,255,255,.92);color:var(--ink);font-size:12px;font-weight:600;padding:6px 11px;border-radius:20px;">{{ p.cls }}</span>
+            </div>
+            <div style="padding:20px;">
+              <div style="font-family:'Manrope';font-weight:700;font-size:21px;color:var(--ink);">{{ p.name }}</div>
+              <div style="font-size:14px;color:var(--slate);margin-top:5px;">◉ {{ p.district }} · {{ p.deadline }}</div>
+              <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+                <span style="background:var(--soft);border:1px solid var(--line);border-radius:8px;font-size:12.5px;color:var(--slate);padding:5px 9px;">Studiya–4 xona</span>
+                <span style="background:var(--soft);border:1px solid var(--line);border-radius:8px;font-size:12.5px;color:var(--slate);padding:5px 9px;">{{ p.freeCount }} ta bo'sh</span>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:space-between;margin-top:16px;padding-top:16px;border-top:1px solid var(--line);">
+                <div style="font-family:'Manrope';font-weight:700;font-size:18px;color:var(--ink);">{{ p.priceFrom }} mln so'mdan</div>
+                <span style="color:var(--blue);font-weight:600;font-size:14px;">Batafsil →</span>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== PROJECT ==================== -->
+    <sc-if value="{{ isProject }}">
+    <section style="animation:mk-fade .4s ease;">
+      <!-- HERO — full-bleed image (4U style) -->
+      <div style="max-width:1320px;margin:0 auto;padding:clamp(14px,2vw,22px) clamp(14px,3vw,32px) 0;">
+        <div style="font-size:13px;color:var(--mute);margin-bottom:14px;"><button data-nav="catalog" style="border:none;background:none;color:var(--mute);cursor:pointer;padding:0;font-size:13px;">Loyihalar</button> / {{ proj.name }}</div>
+      </div>
+      <div data-pjhero="" style="position:relative;width:100%;height:clamp(460px,80vh,880px);overflow:hidden;background:#0A1220;">
+        <div data-pjhero-track="" style="position:absolute;inset:0;">
+          <div data-pjhero-slide="0" style="position:absolute;inset:0;opacity:1;transition:opacity .8s ease;">{{ proj.heroMain }}</div>
+          <div data-pjhero-slide="1" style="position:absolute;inset:0;opacity:0;transition:opacity .8s ease;">{{ proj.heroT1 }}</div>
+          <div data-pjhero-slide="2" style="position:absolute;inset:0;opacity:0;transition:opacity .8s ease;">{{ proj.heroT2 }}</div>
+        </div>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,15,28,.82),rgba(8,15,28,.02) 46%,rgba(8,15,28,.22));pointer-events:none;"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;">
+          <div style="max-width:1320px;margin:0 auto;padding:0 clamp(14px,3vw,32px) clamp(28px,5vh,52px);color:#fff;">
+            <span style="display:inline-block;background:var(--blue);color:#fff;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:8px;margin-bottom:16px;">{{ proj.cls }}</span>
+            <h1 style="font-weight:800;font-size:clamp(30px,5vw,64px);letter-spacing:-.02em;margin:0 0 6px;line-height:1;text-shadow:0 2px 20px rgba(0,0,0,.4);">{{ proj.name }}</h1>
+            <div style="font-size:15px;color:rgba(255,255,255,.9);margin-bottom:10px;">Eng yaqin topshirilish muddati <b>{{ proj.deadline }}</b></div>
+            <div style="font-size:14px;color:rgba(255,255,255,.82);display:flex;align-items:center;gap:6px;">◉ {{ proj.address }}</div>
+          </div>
+        </div>
+        <div style="position:absolute;right:clamp(14px,3vw,32px);bottom:clamp(28px,5vh,52px);display:flex;align-items:center;gap:10px;">
+          <button data-toast="Fotogalereya ochilmoqda" style="border:none;background:rgba(15,24,38,.72);color:#fff;font-size:13px;font-weight:600;padding:11px 16px;border-radius:11px;cursor:pointer;backdrop-filter:blur(6px);display:flex;align-items:center;gap:7px;">▦ 4 ta surat</button>
+          <button data-pjhero-prev="" style="width:46px;height:46px;border-radius:12px;border:none;background:rgba(255,255,255,.9);color:var(--ink);font-size:18px;cursor:pointer;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18);">‹</button>
+          <button data-pjhero-next="" style="width:46px;height:46px;border-radius:12px;border:none;background:rgba(255,255,255,.9);color:var(--ink);font-size:18px;cursor:pointer;backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18);">›</button>
+        </div>
+      </div>
+      <div data-projgallery="" style="display:none;"></div>
+
+      <!-- SPECS STRIP -->
+      <div style="max-width:1320px;margin:clamp(20px,3vw,32px) auto 0;padding:0 clamp(14px,3vw,32px);">
+        <div style="display:flex;flex-wrap:wrap;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow-sm);overflow:hidden;" data-specstrip="">
+          <div style="flex:1;min-width:150px;padding:clamp(16px,2vw,24px);border-right:1px solid var(--line);"><div style="font-size:12.5px;color:var(--mute);margin-bottom:6px;">Uy-joy klassi</div><div style="font-family:'Manrope';font-weight:700;font-size:clamp(16px,1.6vw,20px);color:var(--ink);">{{ proj.cls }}</div></div>
+          <div style="flex:1;min-width:150px;padding:clamp(16px,2vw,24px);border-right:1px solid var(--line);"><div style="font-size:12.5px;color:var(--mute);margin-bottom:6px;">Shift balandligi</div><div style="font-family:'Manrope';font-weight:700;font-size:clamp(16px,1.6vw,20px);color:var(--ink);">{{ proj.shift }}</div></div>
+          <div style="flex:1;min-width:150px;padding:clamp(16px,2vw,24px);border-right:1px solid var(--line);"><div style="font-size:12.5px;color:var(--mute);margin-bottom:6px;">Minimal maydon</div><div style="font-family:'Manrope';font-weight:700;font-size:clamp(16px,1.6vw,20px);color:var(--ink);">{{ proj.minArea }} m²</div></div>
+          <div style="flex:1;min-width:150px;padding:clamp(16px,2vw,24px);border-right:1px solid var(--line);"><div style="font-size:12.5px;color:var(--mute);margin-bottom:6px;">Maksimal maydon</div><div style="font-family:'Manrope';font-weight:700;font-size:clamp(16px,1.6vw,20px);color:var(--ink);">{{ proj.maxArea }} m²</div></div>
+          <div style="flex:1;min-width:150px;padding:clamp(16px,2vw,24px);"><div style="font-size:12.5px;color:var(--mute);margin-bottom:6px;">Qavatlar soni</div><div style="font-family:'Manrope';font-weight:700;font-size:clamp(16px,1.6vw,20px);color:var(--ink);">{{ proj.floorsLabel }}</div></div>
+        </div>
+      </div>
+
+      <div style="max-width:1320px;margin:0 auto;padding:clamp(32px,4vw,56px) clamp(14px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:clamp(24px,3vw,52px);align-items:start;" data-projgrid="">
+        <div>
+          <!-- description -->
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px;">
+            <span style="background:var(--blue-050);color:var(--blue);font-size:13px;font-weight:600;padding:7px 13px;border-radius:8px;">{{ proj.tag }}</span>
+            <span style="background:var(--soft);border:1px solid var(--line);color:var(--slate);font-size:13px;font-weight:500;padding:7px 13px;border-radius:8px;">Monolit-karkas</span>
+            <span style="background:var(--soft);border:1px solid var(--line);color:var(--slate);font-size:13px;font-weight:500;padding:7px 13px;border-radius:8px;">Yopiq hovli</span>
+          </div>
+          <p style="font-size:16.5px;line-height:1.8;color:var(--slate);margin:0 0 22px;max-width:64ch;">{{ proj.name }} — bu shunchaki turar-joy majmuasi emas, balki hayot uchun mukammal muhit. {{ proj.district }} tumanida joylashgan majmua zamonaviy arxitektura, yopiq va xavfsiz hovli, mashinasiz hudud konsepsiyasi hamda {{ proj.cls }} klassidagi pardozlashni o'zida jamlagan. Bu yerda har bir tafsilot yashovchilar qulayligi uchun o'ylab ishlangan.</p>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:clamp(40px,5vw,64px);">
+            <button data-toast="Buklet yuklab olindi (PDF)" style="border:none;background:var(--blue);color:#fff;font-size:14.5px;font-weight:600;padding:14px 24px;border-radius:12px;cursor:pointer;box-shadow:0 8px 22px rgba(0,96,254,.25);">⬇ Buklet yuklab olish</button>
+            <button data-toast="Video prezentatsiya ochilmoqda" style="border:1px solid var(--line);background:#fff;color:var(--ink);font-size:14.5px;font-weight:600;padding:14px 22px;border-radius:12px;cursor:pointer;">▶ Video prezentatsiya</button>
+          </div>
+
+          <!-- FEATURE: HOVLI -->
+          <div style="margin-bottom:clamp(44px,6vw,72px);">
+            <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/8;margin-bottom:26px;">{{ proj.imgHovli }}<span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,15,28,.5),transparent 55%);pointer-events:none;"></span><div style="position:absolute;left:22px;bottom:20px;color:#fff;"><div style="font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:6px;">Ichki hovli</div><div style="font-family:'Manrope';font-weight:800;font-size:clamp(22px,2.6vw,34px);text-shadow:0 2px 12px rgba(0,0,0,.4);">Mashinasiz yashil hovli</div></div></div>
+            <p style="font-size:16px;line-height:1.75;color:var(--slate);margin:0 0 22px;max-width:60ch;">Hovli to'liq piyodalar uchun mo'ljallangan. Boy landshaft, soyabon daraxtlar, oqar suv va bolalar uchun xavfsiz zonalar — bularning barchasi bir joyda.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;">
+              <sc-for list="{{ projFeatHovli }}" as="f" hint-placeholder-count="6"><div style="display:flex;align-items:center;gap:12px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;"><span style="width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--blue-050);color:var(--blue);display:inline-flex;align-items:center;justify-content:center;">{{ f.iconEl }}</span><span style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.25;">{{ f.t }}</span></div></sc-for>
+            </div>
+          </div>
+
+          <!-- FEATURE: HOLL -->
+          <div style="margin-bottom:clamp(44px,6vw,72px);">
+            <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/8;margin-bottom:26px;">{{ proj.imgHall }}<span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,15,28,.5),transparent 55%);pointer-events:none;"></span><div style="position:absolute;left:22px;bottom:20px;color:#fff;"><div style="font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:6px;">Kirish holli</div><div style="font-family:'Manrope';font-weight:800;font-size:clamp(22px,2.6vw,34px);text-shadow:0 2px 12px rgba(0,0,0,.4);">Mualliflik dizaynidagi holl</div></div></div>
+            <p style="font-size:16px;line-height:1.75;color:var(--slate);margin:0 0 22px;max-width:60ch;">Har bir pod'yezd mehmonxona darajasidagi holl bilan boshlanadi: yumshoq kutish zonasi, dizaynerlik yoritilishi va to'siqsiz muhit.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;">
+              <sc-for list="{{ projFeatHall }}" as="f" hint-placeholder-count="6"><div style="display:flex;align-items:center;gap:12px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;"><span style="width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--blue-050);color:var(--blue);display:inline-flex;align-items:center;justify-content:center;">{{ f.iconEl }}</span><span style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.25;">{{ f.t }}</span></div></sc-for>
+            </div>
+          </div>
+
+          <!-- FEATURE: KOVORKING -->
+          <div style="margin-bottom:clamp(44px,6vw,72px);">
+            <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/8;margin-bottom:26px;">{{ proj.imgCowork }}<span style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(8,15,28,.5),transparent 55%);pointer-events:none;"></span><div style="position:absolute;left:22px;bottom:20px;color:#fff;"><div style="font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.85);margin-bottom:6px;">Qo'shnilar markazi</div><div style="font-family:'Manrope';font-weight:800;font-size:clamp(22px,2.6vw,34px);text-shadow:0 2px 12px rgba(0,0,0,.4);">Kovorking va kinoroom</div></div></div>
+            <p style="font-size:16px;line-height:1.75;color:var(--slate);margin:0 0 22px;max-width:60ch;">Uydan chiqmasdan ishlash, dam olish va qo'shnilar bilan muloqot qilish uchun alohida jamoat maydoni — hamma narsa bir necha qadam narida.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;">
+              <sc-for list="{{ projFeatCowork }}" as="f" hint-placeholder-count="6"><div style="display:flex;align-items:center;gap:12px;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:14px 16px;"><span style="width:38px;height:38px;flex-shrink:0;border-radius:10px;background:var(--blue-050);color:var(--blue);display:inline-flex;align-items:center;justify-content:center;">{{ f.iconEl }}</span><span style="font-size:14px;font-weight:600;color:var(--ink);line-height:1.25;">{{ f.t }}</span></div></sc-for>
+            </div>
+          </div>
+
+          <!-- LOCATION -->
+          <div style="margin-bottom:clamp(44px,6vw,72px);">
+            <h3 style="font-weight:800;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.02em;margin:0 0 8px;color:var(--ink);">Ulkan hayot hududi</h3>
+            <p style="font-size:16px;line-height:1.75;color:var(--slate);margin:0 0 22px;max-width:60ch;">Maktablar, bog'chalar, savdo markazlari va bekatlar — barchasi piyoda masofada. Shahar markaziga qulay chiqish.</p>
+            <div style="position:relative;border-radius:20px;overflow:hidden;aspect-ratio:16/9;">{{ proj.imgLoc }}<div style="position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:50px;height:50px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px;box-shadow:0 8px 24px rgba(0,96,254,.4);">◉</div></div>
+          </div>
+
+          <!-- CONSTRUCTION -->
+          <div>
+            <h3 style="font-weight:800;font-size:clamp(22px,2.6vw,32px);letter-spacing:-.02em;margin:0 0 8px;color:var(--ink);">Qurilish qanday ketmoqda</h3>
+            <p style="font-size:16px;line-height:1.75;color:var(--slate);margin:0 0 22px;max-width:60ch;">Qurilish jarayoni bosqichma-bosqich fotogalereyada aks ettiriladi.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px;">
+              <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;">{{ proj.imgC1 }}</div>
+              <div style="position:relative;border-radius:16px;overflow:hidden;aspect-ratio:4/3;">{{ proj.imgC2 }}</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- STICKY SIDEBAR CTA -->
+        <aside data-projaside="" style="position:sticky;top:150px;background:#fff;border:1px solid var(--line);border-radius:20px;padding:26px;box-shadow:var(--shadow);">
+          <div style="font-size:13px;color:var(--mute);">Narxi</div>
+          <div style="font-family:'Manrope';font-weight:800;font-size:clamp(26px,3vw,32px);color:var(--ink);margin:4px 0 2px;">{{ proj.priceFrom }} mln <span style="font-size:15px;font-weight:600;color:var(--slate);">so'mdan</span></div>
+          <div style="font-size:13px;color:var(--slate);margin-bottom:20px;">Studiyadan 4 xonaligacha · {{ proj.totalFree }} ta bo'sh</div>
+          <button sc-camel-on-click="{{ goChess }}" style="width:100%;border:none;background:var(--blue);color:#fff;font-size:16px;font-weight:700;padding:16px;border-radius:12px;cursor:pointer;box-shadow:0 8px 22px rgba(0,96,254,.28);margin-bottom:10px;">Kvartira tanlash →</button>
+          <button data-nav="mortgage" style="width:100%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:15px;font-weight:600;padding:14px;border-radius:12px;cursor:pointer;margin-bottom:20px;">Ipotekani hisoblash</button>
+          <div style="border-top:1px solid var(--line);padding-top:18px;display:flex;flex-direction:column;gap:12px;font-size:14px;">
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--slate);">Topshirish</span><span style="font-weight:600;">{{ proj.deadline }}</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--slate);">Kafolat</span><span style="font-weight:600;">3 yil</span></div>
+            <div style="display:flex;justify-content:space-between;"><span style="color:var(--slate);">Bloklar</span><span style="font-weight:600;">{{ proj.blockCount }} ta</span></div>
+          </div>
+          <div style="margin-top:20px;padding:14px;background:var(--blue-050);border-radius:12px;text-align:center;">
+            <div style="font-size:13px;color:var(--slate);margin-bottom:4px;">Savollaringiz bormi?</div>
+            <a href="tel:1360" style="font-family:'Manrope';font-weight:800;font-size:22px;color:var(--blue);">☎ 1360</a>
+          </div>
+        </aside>
+      </div>
+
+      <!-- REVIEWS -->
+      <div style="background:var(--soft);border-top:1px solid var(--line);">
+        <div style="max-width:1320px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(14px,3vw,32px);">
+          <h3 style="font-weight:800;font-size:clamp(22px,2.8vw,34px);letter-spacing:-.02em;margin:0 0 26px;color:var(--ink);">Egalar fikri</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;">
+            <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+              <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;">
+                <div style="color:#F5A623;margin-bottom:10px;">★★★★★</div>
+                <p style="font-size:14.5px;line-height:1.65;color:var(--slate);margin:0 0 16px;">{{ r.text }}</p>
+                <div style="display:flex;align-items:center;gap:10px;"><span style="width:38px;height:38px;border-radius:50%;background:var(--blue-050);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;">{{ r.abbr }}</span><div><div style="font-weight:600;color:var(--ink);font-size:14px;">{{ r.name }}</div><div style="font-size:12.5px;color:var(--mute);">{{ r.role }}</div></div></div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONTACTS -->
+      <div style="background:var(--ink);color:#fff;">
+        <div style="max-width:1320px;margin:0 auto;padding:clamp(40px,6vw,80px) clamp(14px,3vw,32px);display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,4vw,56px);align-items:center;" data-projcontact="">
+          <div>
+            <h3 style="font-weight:800;font-size:clamp(24px,3vw,38px);margin:0 0 16px;">Sotuv ofisiga tashrif buyuring</h3>
+            <p style="font-size:16px;line-height:1.7;color:rgba(255,255,255,.7);margin:0 0 26px;max-width:44ch;">{{ proj.name }} bo'yicha barcha savollaringizga menejerlarimiz javob beradi. Har kuni 9:00–19:00.</p>
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--blue);">◉</span><div><div style="font-weight:600;">Sotuv ofisi</div><div style="color:rgba(255,255,255,.6);font-size:14px;">Toshkent, {{ proj.district }} tumani</div></div></div>
+              <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--blue);">☎</span><div><div style="font-weight:600;">Call-markaz</div><div style="color:rgba(255,255,255,.6);font-size:14px;">1360 · +998 71 200 13 60</div></div></div>
+            </div>
+            <button sc-camel-on-click="{{ goChess }}" style="margin-top:26px;border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:14px 26px;border-radius:11px;cursor:pointer;">Kvartira tanlash</button>
+          </div>
+          <div style="position:relative;border-radius:18px;overflow:hidden;aspect-ratio:16/11;border:1px solid rgba(255,255,255,.12);">{{ proj.imgLoc }}<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-100%);color:var(--blue);font-size:34px;filter:drop-shadow(0 4px 8px rgba(0,0,0,.3));">◉</div></div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== CHESS (A/B/C) ==================== -->
+    <sc-if value="{{ isChess }}">
+    <section style="max-width:1320px;margin:0 auto;padding:clamp(18px,2.4vw,28px) clamp(14px,3vw,32px) clamp(40px,5vw,70px);animation:mk-fade .35s ease;">
+      <div style="font-size:13px;color:var(--mute);margin-bottom:12px;"><button sc-camel-on-click="{{ openProjBack }}" style="border:none;background:none;color:var(--mute);cursor:pointer;padding:0;font-size:13px;">{{ proj.name }}</button> / Kvartira tanlash</div>
+      <!-- stepper -->
+      <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:24px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <button sc-camel-on-click="{{ s.onClick }}" style="{{ s.style }}"><span style="{{ s.numStyle }}">{{ s.num }}</span>{{ s.label }}</button>
+          <span style="color:var(--mute);">{{ s.sep }}</span>
+        </sc-for>
+      </div>
+
+      <!-- STEP A: GENPLAN -->
+      <sc-if value="{{ chessA }}">
+      <div>
+        <h2 style="font-weight:800;font-size:clamp(22px,2.8vw,34px);margin:0 0 6px;color:var(--ink);">Blokni tanlang</h2>
+        <p style="font-size:15px;color:var(--slate);margin:0 0 22px;">Genplandagi blokka bosing — bo'sh kvartiralar soni ko'rsatilgan.</p>
+        <div style="position:relative;background:linear-gradient(160deg,#EAF0E6,#DCE7EF);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,4vw,50px);min-height:380px;overflow:hidden;">
+          <div style="position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(90deg,transparent,transparent 38px,rgba(15,24,38,.04) 39px),repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(15,24,38,.04) 39px);"></div>
+          <div style="position:absolute;left:8%;bottom:10%;width:32%;height:14px;background:#C9D2CB;border-radius:8px;"></div>
+          <div style="position:relative;display:flex;flex-wrap:wrap;gap:clamp(16px,3vw,40px);align-items:flex-end;justify-content:center;min-height:320px;">
+            <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="3">
+              <button sc-camel-on-click="{{ b.onClick }}" style="{{ b.style }}" style-hover="transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,96,254,.28)">
+                <span style="font-family:'Manrope';font-weight:800;font-size:clamp(30px,4vw,52px);color:#fff;">{{ b.name }}</span>
+                <span style="font-size:12px;color:rgba(255,255,255,.8);">Blok · {{ b.floors }} qavat</span>
+                <span style="margin-top:10px;background:#fff;color:var(--free);font-size:13px;font-weight:700;padding:6px 12px;border-radius:20px;">{{ b.free }} ta bo'sh</span>
+              </button>
+            </sc-for>
+          </div>
+          <div style="position:absolute;right:18px;top:16px;background:rgba(255,255,255,.85);border-radius:10px;padding:8px 12px;font-size:12px;color:var(--slate);">🧭 Yuqoridan ko'rinish</div>
+        </div>
+      </div>
+      </sc-if>
+
+      <!-- STEP B: FACADE / ENTRANCES -->
+      <sc-if value="{{ chessB }}">
+      <div>
+        <h2 style="font-weight:800;font-size:clamp(22px,2.8vw,34px);margin:0 0 6px;color:var(--ink);">Pod'yezdni tanlang · Blok {{ blockId }}</h2>
+        <p style="font-size:15px;color:var(--slate);margin:0 0 22px;">Fasaddagi kirishni tanlang.</p>
+        <div style="display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,1fr);gap:24px;align-items:center;" data-stack="">
+          <div style="background:linear-gradient(180deg,#EAF1FF,#F4F6FA);border:1px solid var(--line);border-radius:20px;padding:clamp(20px,3vw,40px);">
+            <div style="display:flex;flex-direction:column-reverse;gap:5px;max-width:420px;margin:0 auto;">
+              <sc-for list="{{ facadeFloors }}" as="fl" hint-placeholder-count="9">
+                <div style="display:flex;gap:5px;">
+                  <sc-for list="{{ fl.win }}" as="w" hint-placeholder-count="8"><span style="{{ w.style }}"></span></sc-for>
+                </div>
+              </sc-for>
+              <div style="display:flex;gap:5px;margin-top:6px;">
+                <sc-for list="{{ entrances }}" as="e" hint-placeholder-count="2"><button sc-camel-on-click="{{ e.onClick }}" style="{{ e.style }}" style-hover="background:var(--blue);color:#fff">{{ e.label }}</button></sc-for>
+              </div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="font-size:14px;color:var(--slate);">Kirishlar soni: <b style="color:var(--ink);">{{ proj.entrances }} ta</b></div>
+            <sc-for list="{{ entrances }}" as="e" hint-placeholder-count="2">
+              <button sc-camel-on-click="{{ e.onClick }}" style="display:flex;align-items:center;justify-content:space-between;border:1px solid var(--line);background:#fff;border-radius:14px;padding:16px;cursor:pointer;" style-hover="border-color:var(--blue);box-shadow:var(--shadow-sm)"><span style="font-weight:600;color:var(--ink);">{{ e.big }}</span><span style="background:var(--free-bg);color:var(--free);font-size:13px;font-weight:700;padding:5px 11px;border-radius:20px;">{{ e.free }} bo'sh</span></button>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+
+      <!-- STEP C: CHESSBOARD -->
+      <sc-if value="{{ chessC }}">
+      <div>
+        <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
+          <div>
+            <h2 style="font-weight:800;font-size:clamp(22px,2.8vw,34px);margin:0 0 6px;color:var(--ink);">Shaxmatka · Blok {{ blockId }}, {{ entrance }}-pod'yezd</h2>
+            <div style="font-size:15px;color:var(--slate);">Bo'sh: <b style="color:var(--free);">{{ freeCount }} ta</b> · Yacheykaga bosing</div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap;">
+            <div style="display:flex;gap:14px;font-size:12.5px;color:var(--slate);">
+              <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:4px;background:var(--free-bg);border:1.5px solid var(--free);"></span>Bo'sh</span>
+              <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:4px;background:var(--busy-bg);border:1.5px solid var(--busy);"></span>Band</span>
+              <span style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;border-radius:4px;background:var(--sold-bg);border:1.5px solid var(--sold-ln);"></span>Sotilgan</span>
+            </div>
+            <div style="display:flex;border:1px solid var(--line);border-radius:10px;overflow:hidden;" data-viewbar="">
+              <button sc-camel-on-click="{{ setGrid }}" style="{{ gridBtnStyle }}">▦ Shaxmatka</button>
+              <button sc-camel-on-click="{{ setList }}" style="{{ listBtnStyle }}">☰ Ro'yxat</button>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:250px minmax(0,1fr);gap:20px;align-items:start;" data-chessgrid="">
+          <!-- filter panel -->
+          <aside style="background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:20px;position:sticky;top:150px;">
+            <div style="font-weight:700;font-size:16px;color:var(--ink);margin-bottom:16px;">Filtrlar</div>
+            <div style="font-size:13px;font-weight:600;color:var(--slate);margin-bottom:10px;">Xonalar soni</div>
+            <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;">
+              <sc-for list="{{ roomOpts }}" as="r" hint-placeholder-count="5"><button sc-camel-on-click="{{ r.onClick }}" style="{{ r.style }}">{{ r.label }}</button></sc-for>
+            </div>
+            <div style="font-size:13px;font-weight:600;color:var(--slate);margin-bottom:8px;display:flex;justify-content:space-between;">Maydon, m² <span style="color:var(--blue);font-weight:700;">{{ areaLabel }}</span></div>
+            <input type="range" data-flt="area" min="30" max="130" step="2" value="130" style="width:100%;margin-bottom:20px;">
+            <div style="font-size:13px;font-weight:600;color:var(--slate);margin-bottom:8px;display:flex;justify-content:space-between;">Narx, mln so'm <span style="color:var(--blue);font-weight:700;">{{ priceLabel }}</span></div>
+            <input type="range" data-flt="price" min="200" max="2000" step="20" value="2000" style="width:100%;margin-bottom:20px;">
+            <div style="font-size:13px;font-weight:600;color:var(--slate);margin-bottom:8px;display:flex;justify-content:space-between;">Qavat <span style="color:var(--blue);font-weight:700;">{{ floorLabel }}</span></div>
+            <input type="range" data-flt="floor" min="1" max="{{ proj.floors }}" step="1" value="1" style="width:100%;margin-bottom:22px;">
+            <button sc-camel-on-click="{{ resetFilters }}" style="width:100%;border:1px solid var(--line);background:#fff;color:var(--slate);font-size:14px;font-weight:600;padding:11px;border-radius:10px;cursor:pointer;">Tozalash</button>
+          </aside>
+
+          <!-- board -->
+          <div style="overflow-x:auto;">
+            <sc-if value="{{ isGridView }}">
+            <div style="display:flex;flex-direction:column;gap:6px;min-width:520px;">
+              <sc-for list="{{ floors }}" as="row" hint-placeholder-count="9">
+                <div style="display:flex;align-items:center;gap:8px;">
+                  <div style="width:30px;text-align:center;font-size:12px;font-weight:700;color:var(--mute);flex-shrink:0;">{{ row.floor }}</div>
+                  <div style="display:flex;gap:6px;flex:1;">
+                    <sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="5">
+                      <button sc-camel-on-click="{{ c.onClick }}" title="{{ c.title }}" style="{{ c.style }}">
+                        <span style="font-family:'Manrope';font-weight:700;font-size:13px;">{{ c.roomsShort }}</span>
+                        <span style="font-size:10.5px;opacity:.8;">{{ c.area }} m²</span>
+                      </button>
+                    </sc-for>
+                  </div>
+                </div>
+              </sc-for>
+            </div>
+            </sc-if>
+            <sc-if value="{{ isListView }}">
+            <div style="display:flex;flex-direction:column;gap:8px;min-width:480px;">
+              <sc-for list="{{ listCells }}" as="c" hint-placeholder-count="8">
+                <button sc-camel-on-click="{{ c.onClick }}" style="display:flex;align-items:center;justify-content:space-between;gap:14px;border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px 18px;cursor:pointer;text-align:left;" style-hover="border-color:var(--blue);box-shadow:var(--shadow-sm)">
+                  <div style="display:flex;align-items:center;gap:14px;"><span style="{{ c.dot }}"></span><div><div style="font-weight:700;color:var(--ink);">{{ c.roomsLabel }} · {{ c.area }} m²</div><div style="font-size:13px;color:var(--slate);">{{ c.floorLabel }} · Blok {{ c.block }}</div></div></div>
+                  <div style="text-align:right;"><div style="font-family:'Manrope';font-weight:700;color:var(--ink);">{{ c.priceLabel }}</div><div style="font-size:12px;color:{{ c.statusColor }};font-weight:600;">{{ c.statusLabel }}</div></div>
+                </button>
+              </sc-for>
+            </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+      </sc-if>
+    </section>
+    </sc-if>
+
+    <!-- ==================== APARTMENT ==================== -->
+    <sc-if value="{{ isApt }}">
+    <section style="max-width:1320px;margin:0 auto;padding:clamp(18px,2.4vw,28px) clamp(14px,3vw,32px) clamp(40px,5vw,70px);animation:mk-fade .4s ease;">
+      <div style="font-size:13px;color:var(--mute);margin-bottom:16px;"><button sc-camel-on-click="{{ backToChess }}" style="border:none;background:none;color:var(--mute);cursor:pointer;padding:0;font-size:13px;">Shaxmatka</button> / {{ apt.roomsLabel }} · {{ apt.area }} m²</div>
+      <div style="display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:clamp(24px,3vw,44px);align-items:start;" data-aptgrid="">
+        <!-- plan -->
+        <div>
+          <div style="position:relative;background:var(--soft);border:1px solid var(--line);border-radius:18px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;">
+            <image-slot id="mk-apt-plan" shape="rect" fit="contain" placeholder="Kvartira planirovkasi (chizma)"></image-slot>
+          </div>
+          <!-- mini chess indicator -->
+          <div style="margin-top:20px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;">
+            <div style="font-weight:700;font-size:15px;color:var(--ink);margin-bottom:12px;">Qavatdagi o'rni</div>
+            <div style="display:flex;flex-direction:column;gap:4px;">
+              <sc-for list="{{ miniFloors }}" as="row" hint-placeholder-count="6">
+                <div style="display:flex;align-items:center;gap:6px;"><span style="width:20px;font-size:10px;color:var(--mute);text-align:center;">{{ row.floor }}</span><div style="display:flex;gap:4px;"><sc-for list="{{ row.cells }}" as="c" hint-placeholder-count="5"><span style="{{ c.miniStyle }}"></span></sc-for></div></div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+
+        <!-- info + mortgage -->
+        <div>
+          <h1 style="font-weight:800;font-size:clamp(24px,3vw,36px);letter-spacing:-.02em;margin:0 0 4px;color:var(--ink);">{{ apt.roomsLabel }} kvartira</h1>
+          <div style="font-size:15px;color:var(--slate);margin-bottom:18px;">{{ proj.name }} · Blok {{ aptBlock }} · {{ apt.floor }}-qavat</div>
+          <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:6px;">
+            <div style="font-family:'Manrope';font-weight:800;font-size:clamp(28px,3.4vw,40px);color:var(--blue);">{{ apt.priceLabel }}</div>
+            <div style="font-size:14px;color:var(--slate);">{{ apt.ppm2 }} mln/m²</div>
+          </div>
+          <div style="display:inline-flex;align-items:center;gap:8px;background:{{ apt.statusBg }};color:{{ apt.statusColor }};font-size:13px;font-weight:600;padding:6px 12px;border-radius:20px;margin-bottom:22px;"><span style="width:8px;height:8px;border-radius:50%;background:{{ apt.statusColor }};"></span>{{ apt.statusLabel }}</div>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden;margin-bottom:24px;">
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Umumiy maydon</div><div style="font-weight:700;color:var(--ink);">{{ apt.area }} m²</div></div>
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Xonalar</div><div style="font-weight:700;color:var(--ink);">{{ apt.roomsLabel }}</div></div>
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Qavat</div><div style="font-weight:700;color:var(--ink);">{{ apt.floor }} / {{ proj.floors }}</div></div>
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Yo'nalish</div><div style="font-weight:700;color:var(--ink);">{{ apt.orient }}</div></div>
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Balkon</div><div style="font-weight:700;color:var(--ink);">Bor · lodjiya</div></div>
+            <div style="background:#fff;padding:14px 16px;"><div style="font-size:12.5px;color:var(--mute);">Klass</div><div style="font-weight:700;color:var(--ink);">{{ proj.cls }}</div></div>
+          </div>
+
+          <!-- mortgage calc -->
+          <div style="background:var(--blue-050);border:1px solid var(--blue-100);border-radius:16px;padding:20px;margin-bottom:22px;">
+            <div style="font-weight:700;font-size:16px;color:var(--ink);margin-bottom:16px;">Ipoteka kalkulyatori</div>
+            <div style="font-size:13px;color:var(--slate);display:flex;justify-content:space-between;margin-bottom:8px;">Boshlang'ich to'lov <span style="font-weight:700;color:var(--blue);">{{ mortDownLabel }}</span></div>
+            <input type="range" data-mort="down" min="15" max="70" step="5" value="30" style="width:100%;margin-bottom:16px;">
+            <div style="font-size:13px;color:var(--slate);display:flex;justify-content:space-between;margin-bottom:8px;">Muddat <span style="font-weight:700;color:var(--blue);">{{ mortTermLabel }}</span></div>
+            <input type="range" data-mort="term" min="3" max="25" step="1" value="20" style="width:100%;margin-bottom:18px;">
+            <div style="background:#fff;border-radius:12px;padding:16px;display:flex;justify-content:space-between;align-items:center;">
+              <div><div style="font-size:12.5px;color:var(--mute);">Oylik to'lov</div><div style="font-family:'Manrope';font-weight:800;font-size:24px;color:var(--ink);">{{ mortMonthly }}</div></div>
+              <div style="text-align:right;"><div style="font-size:12.5px;color:var(--mute);">Kredit summasi</div><div style="font-weight:700;color:var(--slate);">{{ mortLoan }}</div></div>
+            </div>
+            <div style="font-size:11.5px;color:var(--mute);margin-top:8px;">* Yillik 16% stavka bo'yicha taxminiy hisob.</div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:10px;">
+            <button data-toast="Online xarid arizasi qabul qilindi ✓" style="border:none;background:var(--blue);color:#fff;font-size:16px;font-weight:700;padding:16px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow-sm);">Online sotib olish</button>
+            <div style="display:flex;gap:10px;">
+              <button data-toast="Kvartira 24 soatga bron qilindi" style="flex:1;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:14px;font-weight:600;padding:13px;border-radius:11px;cursor:pointer;">Bron qilish</button>
+              <button data-toast="Qo'ng'iroqqa buyurtma berildi" style="flex:1;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:14px;font-weight:600;padding:13px;border-radius:11px;cursor:pointer;">Qo'ng'iroq</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- similar -->
+      <h3 style="font-weight:700;font-size:22px;margin:44px 0 16px;color:var(--ink);">O'xshash kvartiralar</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;">
+        <sc-for list="{{ similar }}" as="c" hint-placeholder-count="4">
+          <button sc-camel-on-click="{{ c.onClick }}" style="text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px;cursor:pointer;" style-hover="border-color:var(--blue);box-shadow:var(--shadow-sm)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;"><span style="{{ c.dot }}"></span><span style="font-size:12px;color:{{ c.statusColor }};font-weight:600;">{{ c.statusLabel }}</span></div>
+            <div style="font-weight:700;color:var(--ink);">{{ c.roomsLabel }} · {{ c.area }} m²</div>
+            <div style="font-size:13px;color:var(--slate);margin:4px 0 10px;">{{ c.floorLabel }}</div>
+            <div style="font-family:'Manrope';font-weight:700;color:var(--blue);">{{ c.priceLabel }}</div>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== MORTGAGE ==================== -->
+    <sc-if value="{{ isMortgage }}">
+    <section style="max-width:1320px;margin:0 auto;padding:clamp(22px,3vw,44px) clamp(14px,3vw,32px) clamp(40px,5vw,70px);animation:mk-fade .4s ease;">
+      <div style="font-size:13px;color:var(--mute);margin-bottom:10px;"><button data-nav="home" style="border:none;background:none;color:var(--mute);cursor:pointer;padding:0;font-size:13px;">Bosh sahifa</button> / Ipoteka</div>
+      <h1 style="font-weight:800;font-size:clamp(26px,3.4vw,42px);letter-spacing:-.02em;margin:0 0 8px;color:var(--ink);">Ipoteka va to'lov rejalari</h1>
+      <p style="font-size:16px;color:var(--slate);margin:0 0 30px;max-width:60ch;">Hamkor banklarimiz orqali qulay shartlarda kvartira sotib oling. Kalkulyator yordamida oylik to'lovni hisoblang.</p>
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:28px;align-items:start;" data-mortgrid="">
+        <div>
+          <h3 style="font-weight:700;font-size:20px;margin:0 0 14px;color:var(--ink);">Hamkor banklar</h3>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:32px;">
+            <sc-for list="{{ banks }}" as="b" hint-placeholder-count="4">
+              <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;flex-wrap:wrap;">
+                <div style="display:flex;align-items:center;gap:14px;"><span style="width:44px;height:44px;border-radius:11px;background:{{ b.color }};color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Manrope';font-weight:800;">{{ b.abbr }}</span><div><div style="font-weight:700;color:var(--ink);">{{ b.name }}</div><div style="font-size:13px;color:var(--slate);">Boshlang'ich {{ b.down }}dan</div></div></div>
+                <div style="display:flex;gap:22px;align-items:center;">
+                  <div style="text-align:center;"><div style="font-size:12px;color:var(--mute);">Stavka</div><div style="font-weight:700;color:var(--ink);">{{ b.rate }}</div></div>
+                  <div style="text-align:center;"><div style="font-size:12px;color:var(--mute);">Muddat</div><div style="font-weight:700;color:var(--ink);">{{ b.term }}</div></div>
+                  <button data-toast="Bank arizasi yuborildi" style="border:none;background:var(--blue-050);color:var(--blue);font-size:13px;font-weight:600;padding:10px 16px;border-radius:10px;cursor:pointer;">Ariza</button>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+          <h3 style="font-weight:700;font-size:20px;margin:0 0 14px;color:var(--ink);">Ariza qoldiring</h3>
+          <form data-mortform="" style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <input type="text" placeholder="Ismingiz" style="border:1px solid var(--line);border-radius:10px;padding:13px 14px;font-size:15px;outline:none;">
+            <input type="tel" placeholder="Telefon raqamingiz" style="border:1px solid var(--line);border-radius:10px;padding:13px 14px;font-size:15px;outline:none;">
+            <sc-raw-select style="border:1px solid var(--line);border-radius:10px;padding:13px 14px;font-size:15px;outline:none;grid-column:span 2;"><option>Loyihani tanlang</option><option>Oq Daryo</option><option>Yangi Hayot</option><option>Chorbog' Park</option></sc-raw-select>
+            <button type="submit" style="grid-column:span 2;border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:14px;border-radius:11px;cursor:pointer;">Arizani yuborish</button>
+          </form>
+        </div>
+        <!-- calculator -->
+        <aside style="position:sticky;top:150px;background:var(--blue-050);border:1px solid var(--blue-100);border-radius:18px;padding:24px;">
+          <div style="font-weight:700;font-size:18px;color:var(--ink);margin-bottom:18px;">Kalkulyator</div>
+          <div style="font-size:13px;color:var(--slate);display:flex;justify-content:space-between;margin-bottom:8px;">Kvartira narxi <span style="font-weight:700;color:var(--blue);">{{ mgPriceLabel }}</span></div>
+          <input type="range" data-mg="price" min="300" max="2000" step="20" value="600" style="width:100%;margin-bottom:16px;">
+          <div style="font-size:13px;color:var(--slate);display:flex;justify-content:space-between;margin-bottom:8px;">Boshlang'ich to'lov <span style="font-weight:700;color:var(--blue);">{{ mgDownLabel }}</span></div>
+          <input type="range" data-mg="down" min="15" max="70" step="5" value="30" style="width:100%;margin-bottom:16px;">
+          <div style="font-size:13px;color:var(--slate);display:flex;justify-content:space-between;margin-bottom:8px;">Muddat <span style="font-weight:700;color:var(--blue);">{{ mgTermLabel }}</span></div>
+          <input type="range" data-mg="term" min="3" max="25" step="1" value="20" style="width:100%;margin-bottom:20px;">
+          <div style="background:#fff;border-radius:12px;padding:18px;text-align:center;">
+            <div style="font-size:12.5px;color:var(--mute);">Oylik to'lov</div>
+            <div style="font-family:'Manrope';font-weight:800;font-size:30px;color:var(--blue);margin:2px 0;">{{ mgMonthly }}</div>
+            <div style="font-size:13px;color:var(--slate);">Kredit: {{ mgLoan }}</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== ONLINE PURCHASE ==================== -->
+    <sc-if value="{{ isOnline }}">
+    <section style="max-width:1100px;margin:0 auto;padding:clamp(22px,3vw,44px) clamp(14px,3vw,32px) clamp(40px,5vw,70px);animation:mk-fade .4s ease;text-align:center;">
+      <div style="font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;">Online xarid</div>
+      <h1 style="font-weight:800;font-size:clamp(26px,3.6vw,46px);letter-spacing:-.02em;margin:0 auto 14px;color:var(--ink);max-width:20ch;">4 bosqichda kvartirani onlayn sotib oling</h1>
+      <p style="font-size:16px;color:var(--slate);margin:0 auto 44px;max-width:56ch;">Ofisga bormasdan, uydan turib. Har bir bosqichda shaxsiy menejer siz bilan.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px;text-align:left;margin-bottom:48px;">
+        <sc-for list="{{ onlineSteps }}" as="s" hint-placeholder-count="4">
+          <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:var(--shadow-sm);position:relative;">
+            <div style="font-family:'Manrope';font-weight:800;font-size:40px;color:var(--blue-100);line-height:1;">{{ s.num }}</div>
+            <div style="font-size:26px;margin:10px 0;">{{ s.icon }}</div>
+            <div style="font-weight:700;font-size:17px;color:var(--ink);margin-bottom:8px;">{{ s.title }}</div>
+            <div style="font-size:14px;color:var(--slate);line-height:1.6;">{{ s.desc }}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div style="background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:clamp(28px,4vw,48px);">
+        <h2 style="font-weight:800;font-size:clamp(22px,2.8vw,32px);margin:0 0 8px;color:var(--ink);">Nega onlayn?</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:18px;margin:26px 0 34px;text-align:left;">
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--free);font-size:20px;">✓</span><div><div style="font-weight:600;color:var(--ink);">Vaqtni tejash</div><div style="font-size:13.5px;color:var(--slate);">Shartnoma 30 daqiqada.</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--free);font-size:20px;">✓</span><div><div style="font-weight:600;color:var(--ink);">Xavfsiz to'lov</div><div style="font-size:13.5px;color:var(--slate);">Bank himoyasi ostida.</div></div></div>
+          <div style="display:flex;gap:12px;align-items:flex-start;"><span style="color:var(--free);font-size:20px;">✓</span><div><div style="font-weight:600;color:var(--ink);">Onlayn chegirma</div><div style="font-size:13.5px;color:var(--slate);">Maxsus narxlar.</div></div></div>
+        </div>
+        <button data-toast="Ariza qabul qilindi — menejer bog'lanadi ✓" style="border:none;background:var(--blue);color:#fff;font-size:16px;font-weight:700;padding:16px 34px;border-radius:12px;cursor:pointer;box-shadow:var(--shadow-sm);">Hoziroq boshlash</button>
+      </div>
+      <!-- reviews -->
+      <h3 style="font-weight:700;font-size:22px;margin:48px 0 18px;color:var(--ink);">Mijozlar sharhlari</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;text-align:left;">
+        <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;">
+            <div style="color:#F5A623;margin-bottom:10px;">★★★★★</div>
+            <p style="font-size:14.5px;line-height:1.65;color:var(--slate);margin:0 0 16px;">{{ r.text }}</p>
+            <div style="display:flex;align-items:center;gap:10px;"><span style="width:38px;height:38px;border-radius:50%;background:var(--blue-050);color:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;">{{ r.abbr }}</span><div><div style="font-weight:600;color:var(--ink);font-size:14px;">{{ r.name }}</div><div style="font-size:12.5px;color:var(--mute);">{{ r.role }}</div></div></div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    </sc-if>
+
+    <!-- ==================== NEWS DETAIL ==================== -->
+    <sc-if value="{{ isNews }}">
+    <section style="animation:mk-fade .4s ease;">
+      <!-- cover -->
+      <div style="position:relative;width:100%;height:clamp(320px,50vh,520px);overflow:hidden;background:#0A1220;">
+        <div style="position:absolute;inset:0;">{{ news.imgEl }}</div>
+        <div style="position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,13,26,.9),rgba(6,13,26,.2) 55%,rgba(6,13,26,.35));"></div>
+        <div style="position:absolute;left:0;right:0;bottom:0;">
+          <div style="max-width:820px;margin:0 auto;padding:0 clamp(14px,3vw,32px) clamp(28px,4vh,48px);">
+            <button sc-camel-on-click="{{ backHome }}" style="display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.1);backdrop-filter:blur(6px);color:#fff;font-size:13px;font-weight:600;padding:9px 16px;border-radius:9px;cursor:pointer;margin-bottom:22px;">← Yangiliklar</button>
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;"><span style="background:var(--blue);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border-radius:6px;">{{ news.cat }}</span><span style="color:rgba(255,255,255,.75);font-size:13.5px;">{{ news.date }}</span></div>
+            <h1 style="font-family:'Manrope';font-weight:800;font-size:clamp(26px,4vw,48px);line-height:1.08;letter-spacing:-.02em;margin:0;color:#fff;max-width:22ch;">{{ news.title }}</h1>
+          </div>
+        </div>
+      </div>
+      <!-- body -->
+      <div style="max-width:820px;margin:0 auto;padding:clamp(32px,5vw,60px) clamp(14px,3vw,32px);">
+        <p style="font-size:clamp(17px,1.5vw,20px);line-height:1.7;color:var(--ink);font-weight:500;margin:0 0 28px;">{{ news.excerpt }}</p>
+        <sc-for list="{{ news.body }}" as="para" hint-placeholder-count="3">
+          <p style="font-size:16.5px;line-height:1.8;color:var(--slate);margin:0 0 22px;">{{ para }}</p>
+        </sc-for>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:14px;padding-top:28px;border-top:1px solid var(--line);">
+          <button data-nav="catalog" style="border:none;background:var(--blue);color:#fff;font-size:15px;font-weight:600;padding:14px 26px;border-radius:12px;cursor:pointer;">Loyihalarni ko'rish</button>
+          <button data-toast="Ulashish havolasi nusxalandi" style="border:1px solid var(--line);background:#fff;color:var(--ink);font-size:15px;font-weight:600;padding:14px 22px;border-radius:12px;cursor:pointer;">Ulashish</button>
+        </div>
+      </div>
+      <!-- other news -->
+      <div style="background:var(--soft);border-top:1px solid var(--line);">
+        <div style="max-width:1320px;margin:0 auto;padding:clamp(40px,5vw,72px) clamp(14px,3vw,32px);">
+          <h2 style="font-weight:800;font-size:clamp(22px,2.8vw,32px);letter-spacing:-.02em;margin:0 0 26px;color:var(--ink);">Boshqa yangiliklar</h2>
+          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:clamp(16px,2vw,24px);">
+            <sc-for list="{{ news.others }}" as="n" hint-placeholder-count="2">
+              <div sc-camel-on-click="{{ n.open }}" data-card="" style="background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;cursor:pointer;transition:all .24s ease;" style-hover="box-shadow:var(--shadow);transform:translateY(-3px);border-color:var(--blue-100)">
+                <div style="position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--soft);"><div data-cardimg="" style="position:absolute;inset:0;transition:transform .6s ease;">{{ n.imgEl }}</div></div>
+                <div style="padding:20px;">
+                  <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;"><span style="color:var(--blue);font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;">{{ n.cat }}</span><span style="color:var(--mute);font-size:12px;">{{ n.date }}</span></div>
+                  <h3 style="font-family:'Manrope';font-weight:700;font-size:18px;line-height:1.25;letter-spacing:-.01em;margin:0;color:var(--ink);">{{ n.title }}</h3>
+                </div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+    </sc-if>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:var(--ink);color:rgba(255,255,255,.72);padding:clamp(44px,6vw,72px) clamp(14px,3vw,32px) 32px;margin-top:auto;">
+    <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:36px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,.12);" data-footcols="">
+      <div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;"><span style="width:38px;height:38px;border-radius:9px;background:#fff;display:inline-flex;align-items:center;justify-content:center;"><img src="15ec1d24-c51b-4d19-9a00-5d076d453e75" alt="Karvon Stroy" style="width:30px;height:30px;display:block;"></span><span style="font-family:'Manrope';font-weight:800;font-size:20px;color:#fff;">KARVON STROY</span></div>
+        <p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);max-width:34ch;margin:0 0 18px;">Zamonaviy turar-joy majmualari quruvchisi. Ishonch, sifat va muddat.</p>
+        <div style="font-family:'Manrope';font-weight:700;font-size:22px;color:#fff;">☎ 1360</div>
+      </div>
+      <div><div style="font-weight:700;color:#fff;margin-bottom:16px;font-size:15px;">Sotuv bo'limlari</div><div style="display:flex;flex-direction:column;gap:11px;font-size:14px;"><span style="color:rgba(255,255,255,.6);">Yunusobod ofisi</span><span style="color:rgba(255,255,255,.6);">Chilonzor ofisi</span><span style="color:rgba(255,255,255,.6);">Mirzo Ulug'bek ofisi</span></div></div>
+      <div><div style="font-weight:700;color:#fff;margin-bottom:16px;font-size:15px;">Havolalar</div><div style="display:flex;flex-direction:column;gap:11px;font-size:14px;"><button data-nav="catalog" style="border:none;background:none;color:rgba(255,255,255,.6);cursor:pointer;text-align:left;padding:0;font-size:14px;">Loyihalar</button><button data-nav="mortgage" style="border:none;background:none;color:rgba(255,255,255,.6);cursor:pointer;text-align:left;padding:0;font-size:14px;">Ipoteka</button><button data-nav="online" style="border:none;background:none;color:rgba(255,255,255,.6);cursor:pointer;text-align:left;padding:0;font-size:14px;">Online xarid</button></div></div>
+      <div><div style="font-weight:700;color:#fff;margin-bottom:16px;font-size:15px;">Manzil</div><p style="font-size:14px;line-height:1.7;color:rgba(255,255,255,.5);margin:0 0 14px;">Toshkent, Yunusobod tumani, Amir Temur ko'chasi 108</p><div style="display:flex;gap:10px;"><span style="width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:14px;">IG</span><span style="width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:14px;">TG</span><span style="width:36px;height:36px;border-radius:9px;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:14px;">YT</span></div></div>
+    </div>
+    <div style="max-width:1320px;margin:0 auto;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:rgba(255,255,255,.4);">
+      <div>© 2026 KARVON STROY. Barcha huquqlar himoyalangan.</div>
+      <div style="display:flex;gap:20px;"><span>Maxfiylik siyosati</span><span>Ommaviy oferta</span></div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div data-toastbox="" style="position:fixed;left:50%;bottom:28px;transform:translateX(-50%) translateY(140%);z-index:90;background:var(--ink);color:#fff;font-size:14px;font-weight:500;padding:14px 22px;border-radius:12px;box-shadow:0 12px 40px rgba(0,0,0,.3);transition:transform .4s cubic-bezier(.16,1,.3,1);display:flex;align-items:center;gap:10px;"><span style="color:var(--free);">✓</span><span data-toasttext="">Bajarildi</span></div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this.PROJECTS = [
+      {id:'oqdaryo', name:'Oq Daryo', cls:'Komfort+', district:'Yunusobod', deadline:'IV chorak 2026', status:'sotuvda', statusLabel:'Sotuvda', floors:9, blocks:['A','B','C'], entrances:2, priceFrom:420, seed:3, tag:'Yopiq hovli', ppm2:11},
+      {id:'yangihayot', name:'Yangi Hayot', cls:'Biznes', district:'Mirzo Ulug\u2018bek', deadline:'II chorak 2027', status:'start', statusLabel:'Sotuv boshlandi', floors:12, blocks:['A','B'], entrances:3, priceFrom:610, seed:7, tag:'Biznes-klass', ppm2:14},
+      {id:'chorbog', name:'Chorbog\u2018 Park', cls:'Komfort', district:'Chilonzor', deadline:'Topshirilgan', status:'topshirilgan', statusLabel:'Topshirilgan', floors:7, blocks:['A','B','C'], entrances:2, priceFrom:360, seed:5, tag:'Tayyor uy', ppm2:9}
+    ];
+    this.state = {
+      screen:'home', lang:'uz', heroIndex:0,
+      projectId:'oqdaryo', chessStep:'A', blockId:null, entrance:1,
+      apt:null, aptBlock:null, chessView:'grid',
+      flt:{rooms:[], area:130, price:2000, floor:1},
+      mort:{price:600, down:30, term:20},
+      mg:{price:600, down:30, term:20},
+      catCls:'all', catStatus:'all',
+      hsearch:'', hcls:'all', hrooms:'all', hprice:1500,
+      toast:null
+    };
+    this.STATUS = {
+      bosh:{label:'Bo\u2018sh', color:'var(--free)', bg:'var(--free-bg)', ln:'var(--free)'},
+      band:{label:'Band', color:'var(--busy)', bg:'var(--busy-bg)', ln:'var(--busy)'},
+      sotilgan:{label:'Sotilgan', color:'var(--sold)', bg:'var(--sold-bg)', ln:'var(--sold-ln)'}
+    };
+  }
+
+  /* ---------- helpers ---------- */
+  fmt(n){ return Math.round(n).toLocaleString('ru-RU'); }
+  proj(){ return this.PROJECTS.find(p=>p.id===this.state.projectId) || this.PROJECTS[0]; }
+  projStatusColor(p){ return p.status==='sotuvda'?{bg:'var(--free-bg)',c:'var(--free)'}:p.status==='start'?{bg:'var(--blue-050)',c:'var(--blue)'}:{bg:'var(--sold-bg)',c:'var(--sold)'}; }
+
+  genFloors(p, block, entrance){
+    const roomsByCol=[0,1,2,3,2];
+    const areaByRooms={0:34,1:47,2:60,3:85};
+    const bIdx = (p.blocks||['A']).indexOf(block)+1;
+    const floors=[];
+    for(let f=p.floors; f>=1; f--){
+      const cells=[];
+      for(let c=0;c<5;c++){
+        const rooms=roomsByCol[c];
+        const area = (c===4?56:areaByRooms[rooms]) + (f%3) + (c===2?2:0);
+        const price = Math.round(area*p.ppm2 + f*4 + bIdx*3);
+        let key=(f*5 + c*3 + p.seed + bIdx*2 + (entrance||1))%12;
+        if(f<=2) key = key%4;
+        const status = key<3?'sotilgan' : key<5?'band' : 'bosh';
+        const orient=['Janub','Sharq','G\u2018arb','Shimol','Janubi-sharq'][c];
+        cells.push({ id:p.id+'-'+block+'-'+f+'-'+c, f, c, block, rooms,
+          roomsShort: rooms===0?'S':rooms+'x', roomsLabel: rooms===0?'Studiya':rooms+' xonali',
+          area, price, ppm2:(price/area).toFixed(1), status, orient,
+          priceLabel:this.fmt(price)+' mln', floorLabel:f+'-qavat' });
+      }
+      floors.push({floor:f, cells});
+    }
+    return floors;
+  }
+  blockFree(p, block){ return this.genFloors(p, block, 1).reduce((s,r)=>s+r.cells.filter(c=>c.status==='bosh').length,0); }
+  projTotalFree(p){ return (p.blocks||['A']).reduce((s,b)=>s+this.blockFree(p,b),0); }
+
+  cellPassesFilter(c){
+    const f=this.state.flt;
+    if(f.rooms.length && !f.rooms.includes(c.rooms)) return false;
+    if(c.area > f.area) return false;
+    if(c.price > f.price) return false;
+    if(c.f < f.floor) return false;
+    return true;
+  }
+  cellStyle(c, active){
+    const st=this.STATUS[c.status];
+    const clickable = c.status!=='sotilgan';
+    return {
+      width:'100%', minWidth:'62px', height:'50px', border:'1.5px solid '+st.ln,
+      background:st.bg, color:st.color, borderRadius:'9px',
+      display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'center', gap:'1px',
+      cursor: clickable?'pointer':'not-allowed',
+      opacity: active?1:0.22, transition:'all .18s ease',
+      pointerEvents: active?'auto':'none', boxShadow:'none'
+    };
+  }
+
+  /* ---------- nav ---------- */
+  _top(){ requestAnimationFrame(()=>{ try{ const s=document.scrollingElement||document.documentElement; s.scrollTop=0; }catch(e){} }); }
+  go(screen){ if(screen==='project'){ this.setState({screen:'project'}); } else this.setState({screen}); this._top(); if(this._mob) this._mob.style.display='none'; }
+  openProject(id){ this._pjIdx=0; this.setState({screen:'project', projectId:id}); this._top(); }
+  startChess(){ this.setState({screen:'chess', chessStep:'A', blockId:null}); this._top(); }
+  selBlock(b){ this.setState({chessStep:'B', blockId:b, entrance:1}); this._top(); }
+  selEntrance(e){ this.setState({chessStep:'C', entrance:e, flt:{rooms:[],area:130,price:2000,floor:1}}); this._top(); }
+  openApt(cell){ const p=this.proj(); this.setState({screen:'apartment', apt:cell, aptBlock:cell.block, mort:{price:cell.price, down:30, term:20}}); this._top(); this._syncRanges(cell.price); }
+  _syncRanges(price){ requestAnimationFrame(()=>{ const d=document.querySelector('#mk-root [data-mort=down]'); if(d)d.value=30; const t=document.querySelector('#mk-root [data-mort=term]'); if(t)t.value=20; }); }
+
+  toggleRoom(r){ const rooms=this.state.flt.rooms.slice(); const i=rooms.indexOf(r); if(i>=0)rooms.splice(i,1); else rooms.push(r); this.setState({flt:{...this.state.flt, rooms}}); }
+  resetFilters(){ this.setState({flt:{rooms:[],area:130,price:2000,floor:1}}); const root=document.getElementById('mk-root'); if(root){ const a=root.querySelector('[data-flt=area]'); if(a)a.value=130; const pr=root.querySelector('[data-flt=price]'); if(pr)pr.value=2000; const fl=root.querySelector('[data-flt=floor]'); if(fl)fl.value=1; } }
+
+  mortMonthly(m){ const P=m.price*(1-m.down/100)*1e6; const r=0.16/12; const n=m.term*12; const val = r? P*r/(1-Math.pow(1+r,-n)) : P/n; return val; }
+
+  showToast(msg){ this.setState({toast:msg}); const box=document.querySelector('#mk-root [data-toastbox]'); const txt=document.querySelector('#mk-root [data-toasttext]'); if(box){ if(txt) txt.textContent=msg; box.style.transform='translateX(-50%) translateY(0)'; clearTimeout(this._tt); this._tt=setTimeout(()=>{ box.style.transform='translateX(-50%) translateY(140%)'; },2600); } }
+
+  componentDidMount(){
+    const root=document.getElementById('mk-root'); if(!root) return; this._root=root;
+    this._mob=root.querySelector('[data-mobmenu]');
+    // nav buttons (data-nav)
+    root.addEventListener('click',(e)=>{
+      const nb=e.target.closest('[data-nav]'); if(nb){ const s=nb.getAttribute('data-nav'); if(s==='project'){ this.openProject(this.state.projectId); } else this.go(s); return; }
+      const tb=e.target.closest('[data-toast]'); if(tb){ this.showToast(tb.getAttribute('data-toast')); return; }
+      const lg=e.target.closest('[data-lang]'); if(lg){ this.setLang(lg.getAttribute('data-lang')); return; }
+      const bg=e.target.closest('[data-burger]'); if(bg){ if(this._mob) this._mob.style.display = this._mob.style.display==='flex'?'none':'flex'; return; }
+      // hero controls
+      if(e.target.closest('[data-hero-prev]')){ this.heroGo(-1); this._heroRestart(); return; }
+      if(e.target.closest('[data-hero-next]')){ this.heroGo(1); this._heroRestart(); return; }
+      if(e.target.closest('[data-pjhero-prev]')){ this.pjHeroGo(-1); return; }
+      if(e.target.closest('[data-pjhero-next]')){ this.pjHeroGo(1); return; }
+      const dot=e.target.closest('[data-hero-dot]'); if(dot){ this.heroSet(parseInt(dot.getAttribute('data-hero-dot'))); this._heroRestart(); return; }
+    });
+    // range inputs
+    root.addEventListener('input',(e)=>{
+      const t=e.target;
+      if(t.dataset.flt){ this.setState({flt:{...this.state.flt, [t.dataset.flt]: parseFloat(t.value)}}); }
+      else if(t.dataset.mort){ this.setState({mort:{...this.state.mort, [t.dataset.mort]: parseFloat(t.value)}}); }
+      else if(t.dataset.mg){ this.setState({mg:{...this.state.mg, [t.dataset.mg]: parseFloat(t.value)}}); }
+      else if(t.hasAttribute('data-hsearch')){ this.setState({hsearch:t.value}); }
+      else if(t.hasAttribute('data-hprice')){ this.setState({hprice:parseFloat(t.value)}); }
+    });
+    // forms
+    root.addEventListener('submit',(e)=>{ e.preventDefault(); this.showToast('Arizangiz qabul qilindi — tez orada bog\u2018lanamiz'); e.target.reset&&e.target.reset(); });
+    // responsive
+    const onResize=()=>{ const m=innerWidth<900; if(m!==this.state.isMobile) this.setState({isMobile:m}); this._applyResponsive(m); };
+    this._applyResponsive=(m)=>{ const nl=root.querySelector('[data-navlinks]'); const cta=root.querySelector('header [data-nav=catalog]'); const bur=root.querySelector('[data-burger]');
+      if(nl) nl.style.display=m?'none':'flex'; if(bur) bur.style.display=m?'block':'none';
+      root.querySelectorAll('[data-projgrid],[data-mortgrid],[data-aptgrid],[data-projcontact]').forEach(g=>{ g.style.gridTemplateColumns=m?'1fr':''; });
+      const pg=root.querySelector('[data-projgallery]'); if(pg){ pg.style.gridTemplateColumns=m?'1fr':'2fr 1fr'; pg.style.gridTemplateRows=m?'auto':'1fr 1fr'; pg.style.height=m?'auto':''; }
+      const cg=root.querySelector('[data-chessgrid]'); if(cg) cg.style.gridTemplateColumns=m?'1fr':'250px minmax(0,1fr)';
+      const fc=root.querySelector('[data-footcols]'); if(fc) fc.style.gridTemplateColumns=m?'1fr 1fr':'';
+    };
+    addEventListener('resize',onResize); onResize();
+    // hero dots
+    const dotsBox=root.querySelector('[data-hero-dots]');
+    if(dotsBox){ for(let i=0;i<this.heroCount();i++){ const d=document.createElement('button'); d.setAttribute('data-hero-dot',i); d.style.cssText='height:9px;width:'+(i===0?'26px':'9px')+';border-radius:20px;border:none;background:'+(i===0?'#fff':'rgba(255,255,255,.5)')+';cursor:pointer;transition:all .3s ease;padding:0;box-shadow:0 1px 4px rgba(0,0,0,.2);'; dotsBox.appendChild(d); } }
+    // hero autoplay
+    this._heroRestart=()=>{ clearInterval(this._hero); this._hero=setInterval(()=>{ if(this.state.screen==='home') this.heroGo(1); },5000); };
+    this._heroRestart();
+    this.applyLang();
+  }
+  componentDidUpdate(){ this.applyLang(); if(this._applyResponsive) this._applyResponsive(innerWidth<900); }
+
+  /* ---------- news ---------- */
+  newsList(){ return [
+    {id:'n1', cat:'Sotuvlar', date:'8 Iyul 2026', img:'uploads/DJI_20260625064133_0060_D_edd307f13b.jpg', title:'Oq Daryo majmuasida yangi blok sotuvi boshlandi', excerpt:'C blokdagi studiyadan 4 xonaligacha kvartiralar endi shaxmatka orqali onlayn tanlash uchun ochiq.', body:['Oq Daryo turar-joy majmuasining C bloki sotuvga chiqarildi. Blok 9 qavatdan iborat bo\u2018lib, studiyadan to\u2018rt xonali kvartiralargacha bo\u2018lgan planirovkalarni o\u2018z ichiga oladi.','Xaridorlar endi saytdagi interaktiv shaxmatka orqali qavat, pod\u2018yezd va kvartirani mustaqil tanlashlari, narx va maydonni ko\u2018rishlari mumkin. Boshlang\u2018ich narx 420 mln so\u2018mdan.','Ochilish munosabati bilan iyul oyi davomida band qilganlar uchun maxsus to\u2018lov jadvali amal qiladi.']},
+    {id:'n2', cat:'Tadbirlar', date:'1 Iyul 2026', img:'uploads/IMGL_0248_2_755a5bdd99.jpg', title:'Yangi savdo-xizmat markazi tantanali ochildi', excerpt:'Majmua hududida rezidentlar uchun yangi ijtimoiy infratuzilma ob\u2019ekti foydalanishga topshirildi.', body:['Karvon Stroy navbatdagi ijtimoiy ob\u2019ektni ochdi. Tantanali marosimda kompaniya rahbariyati va hamkorlar ishtirok etdi.','Yangi markaz rezidentlarga kundalik xizmatlar, do\u2018konlar va maishiy xizmat nuqtalarini bir joyda taqdim etadi.','Bu majmua infratuzilmasini yanada qulay va to\u2018liq qilish yo\u2018lidagi keyingi qadamdir.']},
+    {id:'n3', cat:'Kompaniya', date:'24 Iyun 2026', img:'uploads/N016751_a341688bb7.jpg', title:'Karvon Stroy hamkor banklar ro\u2018yxatini kengaytirdi', excerpt:'Endi yetakchi banklar bilan hamkorlikda 15% boshlang\u2018ich to\u2018lov bilan ipoteka rasmiylashtirish mumkin.', body:['Karvon Stroy mijozlar uchun ipoteka imkoniyatlarini kengaytirdi. Yangi hamkorlik doirasida boshlang\u2018ich to\u2018lov 15% dan boshlanadi, muddat esa 25 yilgacha.','Ariza saytimiz orqali onlayn topshiriladi va menejer 24 soat ichida bog\u2018lanadi.','Kalkulyator yordamida oylik to\u2018lovni oldindan hisoblab olishingiz mumkin.']}
+  ]; }
+  openNews(id){ this.setState({screen:'news', newsId:id}); this._top(); if(this._mob) this._mob.style.display='none'; }
+
+  /* ---------- hero (image carousel) ---------- */
+  heroCount(){ return 5; }
+  heroGo(d){ const n=this.heroCount(); this.heroSet((this.state.heroIndex+d+n)%n); }
+  heroSet(i){ this.setState({heroIndex:i}); const root=this._root; if(!root)return;
+    root.querySelectorAll('[data-hero-slide]').forEach((el,j)=>{ el.style.opacity=j===i?'1':'0'; });
+    root.querySelectorAll('[data-hero-dot]').forEach((d,j)=>{ d.style.width=j===i?'26px':'9px'; d.style.background=j===i?'#fff':'rgba(255,255,255,.5)'; });
+  }
+
+  /* ---------- project hero ---------- */
+  pjHeroGo(d){ const root=this._root; if(!root)return; const slides=root.querySelectorAll('[data-pjhero-slide]'); if(!slides.length)return; const n=slides.length; this._pjIdx=((this._pjIdx||0)+d+n)%n; slides.forEach((el,j)=>{ el.style.opacity=j===this._pjIdx?'1':'0'; }); }
+
+  /* ---------- lang ---------- */
+  setLang(l){ this.setState({lang:l}); const root=this._root; if(root){ root.querySelectorAll('[data-lang]').forEach(b=>{ const on=b.getAttribute('data-lang')===l; b.style.background=on?'var(--blue)':'transparent'; b.style.color=on?'#fff':'var(--slate)'; }); } }
+  applyLang(){ const root=this._root||document.getElementById('mk-root'); if(!root) return; const ru=this.state.lang==='ru';
+    root.querySelectorAll('[data-ru]').forEach(el=>{ if(el.dataset.uz===undefined) el.dataset.uz=el.textContent; el.textContent = ru? el.getAttribute('data-ru') : el.dataset.uz; });
+  }
+
+  /* ---------- render ---------- */
+  renderVals(){
+    const s=this.state, p=this.proj(), R=this;
+    const scr=(x)=>s.screen===x;
+    const psc=this.projStatusColor(p);
+
+    // quicklinks
+    const quicklinks=[
+      {icon:'\u2726', label:'KARVON+ ta\u2019mirli', onClick:()=>this.go('catalog')},
+      {icon:'\u25A9', label:'Loyihalar', onClick:()=>this.go('catalog')},
+      {icon:'\u25A4', label:'Yangiliklar', onClick:()=>this.openNews('n1')},
+      {icon:'\u25AD', label:'Parkinglar', onClick:()=>this.go('catalog')}
+    ];
+
+    const imgEl=(src)=>src?React.createElement('img',{src, alt:'', style:{width:'100%',height:'100%',objectFit:'cover',display:'block'}}):null;
+    const projImgs={ oqdaryo:'uploads/668_A9925_1_aaed991233.jpg', yangihayot:'uploads/C_01_6_6c21b0e612.jpg', chorbog:'uploads/C_07_8_8f034d1248.jpg' };
+    const mapProj=(pp, slotPrefix)=>{ const c=this.projStatusColor(pp); return {
+      id:pp.id, name:pp.name, cls:pp.cls, district:pp.district, deadline:pp.deadline, priceFrom:pp.priceFrom,
+      statusLabel:pp.statusLabel, statusBg:c.bg, statusColor:c.c, freeCount:this.projTotalFree(pp),
+      img:projImgs[pp.id]||'', imgEl:imgEl(projImgs[pp.id]),
+      address:'Toshkent, '+pp.district+' tumani', floorsLabel:pp.floors+' qavatgacha',
+      openChess:()=>{ this.setState({projectId:pp.id, screen:'chess', chessStep:'A', blockId:null}); this._top(); },
+      slot:slotPrefix+'-'+pp.id, slotCat:'cat-'+pp.id, open:()=>this.openProject(pp.id)
+    };};
+    // home search + filter
+    const projHasRoom=(pp,r)=>(pp.blocks||['A']).some(b=>this.genFloors(pp,b,1).some(row=>row.cells.some(cc=>cc.rooms===r && cc.status!=='sotilgan')));
+    const q=(s.hsearch||'').trim().toLowerCase();
+    const homeFiltered=this.PROJECTS.filter(pp=>{
+      if(q && !((pp.name+' '+pp.district).toLowerCase().includes(q))) return false;
+      if(s.hcls!=='all' && pp.cls!==s.hcls) return false;
+      if(pp.priceFrom > s.hprice) return false;
+      if(s.hrooms!=='all' && !projHasRoom(pp, s.hrooms)) return false;
+      return true;
+    });
+    const homeProjects=homeFiltered.map(pp=>mapProj(pp,'home'));
+    const homeResultCount=homeProjects.length;
+    const hchip=(active)=>({ border:'1px solid '+(active?'var(--blue)':'var(--line)'), background:active?'var(--blue)':'#fff', color:active?'#fff':'var(--ink)', fontSize:'13px', fontWeight:600, padding:'9px 15px', borderRadius:'10px', cursor:'pointer', transition:'all .2s ease' });
+    const homeClsOpts=[['all','Barchasi'],['Komfort','Komfort'],['Komfort+','Komfort+'],['Biznes','Biznes']].map(([v,l])=>({label:l, style:hchip(s.hcls===v), onClick:()=>this.setState({hcls:v})}));
+    const homeRoomOpts=[['all','Barchasi'],[0,'Studiya'],[1,'1'],[2,'2'],[3,'3'],[4,'4+']].map(([v,l])=>({label:l, style:hchip(s.hrooms===v), onClick:()=>this.setState({hrooms:v})}));
+    const homeResetFilters=()=>{ this.setState({hsearch:'',hcls:'all',hrooms:'all',hprice:1500}); const root=document.getElementById('mk-root'); if(root){ const si=root.querySelector('[data-hsearch]'); if(si)si.value=''; const pr=root.querySelector('[data-hprice]'); if(pr)pr.value=1500; } };
+    const homePriceLabel=s.hprice>=1500?'∞':s.hprice;
+    // catalog filter
+    let catalogProjects=this.PROJECTS.filter(pp=> (s.catCls==='all'||pp.cls===s.catCls) && (s.catStatus==='all'||pp.status===s.catStatus)).map(pp=>mapProj(pp,'cat'));
+    const chip=(active)=>({ border:'1px solid '+(active?'var(--blue)':'var(--line)'), background:active?'var(--blue)':'#fff', color:active?'#fff':'var(--ink)', fontSize:'13px', fontWeight:600, padding:'9px 15px', borderRadius:'10px', cursor:'pointer' });
+    const catClassOpts=[['all','Barcha klass'],['Komfort','Komfort'],['Komfort+','Komfort+'],['Biznes','Biznes']].map(([v,l])=>({label:l, style:chip(s.catCls===v), onClick:()=>this.setState({catCls:v})}));
+    const catStatusOpts=[['all','Barchasi'],['sotuvda','Sotuvda'],['start','Start'],['topshirilgan','Topshirilgan']].map(([v,l])=>({label:l, style:chip(s.catStatus===v), onClick:()=>this.setState({catStatus:v})}));
+
+    // project extras
+    const amenities=[
+      {icon:'\uD83C\uDF33', label:'Landshaft dizayn'},{icon:'\uD83D\uDEDD', label:'Bolalar maydoni'},
+      {icon:'\uD83D\uDCAA', label:'Workout zona'},{icon:'\uD83D\uDCF9', label:'24/7 kuzatuv'},
+      {icon:'\uD83D\uDEB2', label:'Mashinasiz hovli'},{icon:'\uD83C\uDD7F\uFE0F', label:'Yer osti parking'}
+    ];
+    const projView={ ...p, statusBg:psc.bg, statusColor:psc.c, blockCount:(p.blocks||[]).length, totalFree:this.projTotalFree(p),
+      g1:'pj-'+p.id+'-1', g2:'pj-'+p.id+'-2', g3:'pj-'+p.id+'-3', gen:'pj-'+p.id+'-gen', c1:'pj-'+p.id+'-c1', c2:'pj-'+p.id+'-c2' };
+    // rich detail extras
+    const gpool=[projImgs[p.id]||'uploads/C_01_6_6c21b0e612.jpg','uploads/C_07_8_8f034d1248.jpg','uploads/668_A9925_1_aaed991233.jpg'];
+    projView.address='Toshkent, '+p.district+' tumani';
+    projView.floorsLabel=p.floors+' qavat';
+    projView.shift='3 m'; projView.minArea=30; projView.maxArea=131;
+    projView.heroMain=imgEl(gpool[0]); projView.heroT1=imgEl(gpool[1]); projView.heroT2=imgEl(gpool[2]);
+    projView.imgHovli=imgEl('uploads/668_A9925_1_aaed991233.jpg');
+    projView.imgHall=imgEl('uploads/IMGL_0248_2_755a5bdd99.jpg');
+    projView.imgCowork=imgEl('uploads/C_01_6_6c21b0e612.jpg');
+    projView.imgLoc=imgEl('uploads/DJI_20260625064133_0060_D_edd307f13b.jpg');
+    projView.imgC1=imgEl('uploads/C_07_8_8f034d1248.jpg');
+    projView.imgC2=imgEl('uploads/668_A9925_1_aaed991233.jpg');
+    const svgI=(inner)=>React.createElement('svg',{width:22,height:22,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.7,strokeLinecap:'round',strokeLinejoin:'round',style:{display:'block'},dangerouslySetInnerHTML:{__html: inner.indexOf('<')>=0 ? inner : '<path d="'+inner+'"/>'}});
+    const IC={
+      tree:'M12 22v-6M8 16a4 4 0 0 1-1.5-7.7A4 4 0 0 1 12 3a4 4 0 0 1 5.5 5.3A4 4 0 0 1 16 16z',
+      shield:'M20 13c0 5-3.5 7.5-7.7 8.95a1 1 0 0 1-.67 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.5 3.81 17 5 19 5a1 1 0 0 1 1 1zM9 12l2 2 4-4',
+      palette:'<circle cx="13.5" cy="6.5" r="1.2"/><circle cx="17.5" cy="10.5" r="1.2"/><circle cx="8.5" cy="7.5" r="1.2"/><circle cx="6.5" cy="12.5" r="1.2"/><path d="M12 2a10 10 0 0 0 0 20 2.5 2.5 0 0 0 2-4 2.5 2.5 0 0 1 2-4h2a4 4 0 0 0 4-4 10 10 0 0 0-10-8z"/>',
+      flame:'M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.4-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.3 1-3a2.5 2.5 0 0 0 2.5 2.5z',
+      kids:'<circle cx="12" cy="4.5" r="2"/><path d="M12 6.5V13M8 9l4-1 4 1M9 21l3-8 3 8"/>',
+      sport:'M6.5 6.5l11 11M20.5 3.5l-2 2M3.5 20.5l2-2M18 4l2 2-3 3-2-2zM6 14l2 2-3 3-2-2z',
+      elevator:'<rect x="4" y="2" width="16" height="20" rx="2"/><path d="M12 6l-2 3h4zM12 18l-2-3h4z"/>',
+      sofa:'M20 9V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v2M2 11a2 2 0 0 1 2 2v3h16v-3a2 2 0 1 1 2-2v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zM4 18v2M20 18v2',
+      access:'<circle cx="16" cy="4" r="1.4"/><path d="M18 19l-2.5-4.5L18 13l-4-1.5-1 5M11 12l-1.5 7"/>',
+      door:'M13 4h3a2 2 0 0 1 2 2v14M2 20h20M14 12v.01M10 20V6a2 2 0 0 1 2-2h2',
+      mail:'<rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/>',
+      laptop:'M3 5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v9H3zM2 17h20l-1.2 3H3.2z',
+      film:'<rect x="2.5" y="4" width="19" height="16" rx="2"/><path d="M7 4v16M17 4v16M2.5 9h4.5M2.5 15h4.5M17 9h4.5M17 15h4.5"/>',
+      book:'M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z',
+      coffee:'M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4zM6 1v3M10 1v3M14 1v3',
+      gamepad:'M8 11h4M10 9v4M15 11h.01M18 13h.01M17.3 5H6.7a4 4 0 0 0-3.98 3.6C2.6 9.4 2 14.5 2 16a3 3 0 0 0 5 2l1.4-1.4a2 2 0 0 1 1.42-.6h4.36a2 2 0 0 1 1.42.6L17 18a3 3 0 0 0 5-2c0-1.5-.6-6.6-.72-7.4A4 4 0 0 0 17.3 5z',
+      users:'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8M22 21v-2a4 4 0 0 0-3-3.87M16 3.1a4 4 0 0 1 0 7.75'
+    };
+    const projFeatHovli=[{k:'tree',t:'Boy yashil hudud'},{k:'shield',t:'24/7 xavfsizlik'},{k:'palette',t:'Landshaft dizayn'},{k:'flame',t:'Barbekyu zonasi'},{k:'kids',t:'Bolalar maydonchalari'},{k:'sport',t:'Sport maydonlari'}].map(f=>({...f,iconEl:svgI(IC[f.k])}));
+    const projFeatHall=[{k:'elevator',t:'Shovqinsiz liftlar'},{k:'palette',t:'Dizaynerlik hollari'},{k:'sofa',t:'Yumshoq kutish zonasi'},{k:'access',t:'To\u2018siqsiz muhit'},{k:'door',t:'Alohida kirishlar'},{k:'mail',t:'Pochta zonasi'}].map(f=>({...f,iconEl:svgI(IC[f.k])}));
+    const projFeatCowork=[{k:'laptop',t:'Kovorking zona'},{k:'film',t:'Kinoroom'},{k:'book',t:'Kutubxona'},{k:'coffee',t:'Kofe-point'},{k:'gamepad',t:'O\u2018yin zonasi'},{k:'users',t:'Uchrashuv xonalari'}].map(f=>({...f,iconEl:svgI(IC[f.k])}));
+
+    // chess
+    const stepMeta=[['A','Blok'],['B','Pod\u2019yezd'],['C','Kvartira']];
+    const order={A:0,B:1,C:2};
+    const steps=stepMeta.map(([k,l],i)=>{ const done=order[s.chessStep]>=i; const cur=s.chessStep===k;
+      return { label:l, num:i+1, sep:i<2?'\u203A':'',
+        onClick:()=>{ if(k==='A')this.setState({chessStep:'A'}); else if(k==='B'&&s.blockId)this.setState({chessStep:'B'}); },
+        style:{ display:'flex', alignItems:'center', gap:'8px', border:'1px solid '+(cur?'var(--blue)':'var(--line)'), background:cur?'var(--blue-050)':'#fff', color:cur||done?'var(--ink)':'var(--mute)', fontSize:'14px', fontWeight:600, padding:'8px 14px', borderRadius:'10px', cursor:'pointer' },
+        numStyle:{ width:'22px', height:'22px', borderRadius:'50%', display:'inline-flex', alignItems:'center', justifyContent:'center', fontSize:'12px', fontWeight:700, background:cur?'var(--blue)':done?'var(--free)':'var(--line)', color:(cur||done)?'#fff':'var(--slate)' } };
+    });
+    const blocks=(p.blocks||[]).map((b,i)=>{ const free=this.blockFree(p,b); const heights=[240,300,200,270]; return {
+      name:b, free, floors:p.floors, onClick:()=>this.selBlock(b),
+      style:{ display:'flex', flexDirection:'column', alignItems:'center', justifyContent:'flex-end', gap:'4px', width:'clamp(110px,15vw,150px)', height:heights[i%heights.length]+'px', paddingBottom:'18px', border:'none', borderRadius:'14px 14px 6px 6px', background:'linear-gradient(180deg,#3D7BFF,#0060FE)', cursor:'pointer', transition:'all .25s ease', boxShadow:'0 10px 30px rgba(0,96,254,.2)' }
+    };});
+    const facadeFloors=[]; for(let f=p.floors;f>=1;f--){ const win=[]; for(let w=0;w<8;w++){ const lit=((f*3+w*5+p.seed)%3===0); win.push({style:{ width:'26px', height:'20px', borderRadius:'3px', background:lit?'rgba(0,96,254,.28)':'rgba(15,24,38,.1)', border:'1px solid rgba(15,24,38,.08)' }}); } facadeFloors.push({win}); }
+    const entrances=[]; for(let e=1;e<=p.entrances;e++){ entrances.push({ label:e+'', big:e+'-pod\u2019yezd', free:Math.round(this.blockFree(p,s.blockId||'A')/p.entrances), onClick:()=>this.selEntrance(e), style:{ flex:1, height:'40px', border:'1px solid var(--blue)', background:'var(--blue-050)', color:'var(--blue)', borderRadius:'8px', fontSize:'13px', fontWeight:700, cursor:'pointer', transition:'all .2s ease' } }); }
+
+    // chessboard step C
+    const rawFloors = s.chessStep==='C' ? this.genFloors(p, s.blockId||'A', s.entrance) : [];
+    let freeCount=0; const listCells=[];
+    const floors=rawFloors.map(row=>({ floor:row.floor, cells: row.cells.map(c=>{ const active=this.cellPassesFilter(c); if(active&&c.status==='bosh')freeCount++; if(active) listCells.push(c);
+      return { ...c, onClick: c.status!=='sotilgan'?(()=>this.openApt(c)):(()=>{}), title:c.roomsLabel+' · '+c.area+' m² · '+this.STATUS[c.status].label, style:this.cellStyle(c,active) }; }) }));
+    listCells.sort((a,b)=>a.price-b.price);
+    const listCellsV=listCells.map(c=>({ ...c, onClick:c.status!=='sotilgan'?(()=>this.openApt(c)):(()=>{}), statusLabel:this.STATUS[c.status].label, statusColor:this.STATUS[c.status].color, dot:{width:'12px',height:'12px',borderRadius:'50%',background:this.STATUS[c.status].color,flexShrink:0} }));
+    const roomOpts=[[0,'Studiya'],[1,'1'],[2,'2'],[3,'3'],[4,'4+']].map(([v,l])=>{ const on=s.flt.rooms.includes(v); return { label:l, onClick:()=>this.toggleRoom(v), style:{ border:'1px solid '+(on?'var(--blue)':'var(--line)'), background:on?'var(--blue)':'#fff', color:on?'#fff':'var(--ink)', fontSize:'13px', fontWeight:600, padding:'8px 12px', borderRadius:'9px', cursor:'pointer' } }; });
+    const vbtn=(on)=>({ border:'none', background:on?'var(--blue)':'#fff', color:on?'#fff':'var(--slate)', fontSize:'13px', fontWeight:600, padding:'9px 14px', cursor:'pointer' });
+
+    // apartment
+    const apt=s.apt||{}; const aptStatus=apt.status?this.STATUS[apt.status]:this.STATUS.bosh;
+    const miniRaw = s.apt ? this.genFloors(p, s.aptBlock||'A', s.entrance) : [];
+    const miniFloors=miniRaw.map(row=>({ floor:row.floor, cells:row.cells.map(c=>{ const isSel=s.apt&&c.id===s.apt.id; const st=this.STATUS[c.status];
+      return { miniStyle:{ width:'16px', height:'12px', borderRadius:'3px', background:isSel?'var(--blue)':st.bg, border:'1px solid '+(isSel?'var(--blue)':st.ln), boxShadow:isSel?'0 0 0 2px rgba(0,96,254,.25)':'none' } }; }) }));
+    const similar = s.apt ? this.genFloors(p, s.aptBlock||'A', s.entrance).flatMap(r=>r.cells).filter(c=>c.rooms===apt.rooms && c.id!==apt.id).slice(0,4).map(c=>({ ...c, onClick:()=>this.openApt(c), statusLabel:this.STATUS[c.status].label, statusColor:this.STATUS[c.status].color, dot:{width:'10px',height:'10px',borderRadius:'50%',background:this.STATUS[c.status].color} })) : [];
+    const mMonthly=this.mortMonthly(s.mort); const mLoan=s.mort.price*(1-s.mort.down/100);
+
+    // mortgage page
+    const banks=[
+      {abbr:'IB', name:'Ipoteka Bank', color:'#1E7A46', down:'15%', rate:'16%', term:'20 yil'},
+      {abbr:'AB', name:'Aloqa Bank', color:'#0060FE', down:'20%', rate:'17%', term:'15 yil'},
+      {abbr:'KD', name:'Kapital Bank', color:'#8B1E3F', down:'25%', rate:'15%', term:'25 yil'},
+      {abbr:'HB', name:'Hamkor Bank', color:'#E8901A', down:'15%', rate:'18%', term:'18 yil'}
+    ];
+    const mgMonthly=this.mortMonthly(s.mg); const mgLoan=s.mg.price*(1-s.mg.down/100);
+
+    const onlineSteps=[
+      {num:'01', icon:'\uD83D\uDCDD', title:'Ariza', desc:'Kvartirani tanlab, onlayn ariza qoldiring.'},
+      {num:'02', icon:'\uD83D\uDCAC', title:'Konsultatsiya', desc:'Menejer siz bilan bog\u2018lanadi va shartlarni tushuntiradi.'},
+      {num:'03', icon:'\u270D\uFE0F', title:'Shartnoma', desc:'Elektron raqamli imzo bilan shartnoma imzolanadi.'},
+      {num:'04', icon:'\uD83D\uDCB3', title:'To\u2018lov', desc:'Xavfsiz onlayn to\u2018lov yoki ipoteka rasmiylashtiriladi.'}
+    ];
+    const reviews=[
+      {abbr:'DA', name:'Dilnoza A.', role:'Oq Daryo, 2 xona', text:'Hammasi onlayn bo\u2018ldi, ofisga bir marta bordim xolos. Menejer juda yordam berdi.'},
+      {abbr:'BT', name:'Bekzod T.', role:'Yangi Hayot, 3 xona', text:'Ipoteka rasmiylashtirish oson kechdi. Qurilish muddatida topshirildi.'},
+      {abbr:'ML', name:'Malika L.', role:'Chorbog\u2018 Park, studiya', text:'Shaxmatka orqali qavatni o\u2018zim tanladim — juda qulay. Rahmat KARVON STROY!'}
+    ];
+
+    // news
+    const news=this.newsList().map(n=>({ ...n, imgEl:imgEl(n.img), open:()=>this.openNews(n.id) }));
+    const featuredNews=[news[0]];
+    const sideNews=news.slice(1);
+    const cur=news.find(n=>n.id===s.newsId)||news[0];
+    const others=news.filter(n=>n.id!==cur.id).map(n=>({ ...n }));
+    const newsView={ ...cur, others };
+
+    return {
+      isHome:scr('home'), isCatalog:scr('catalog'), isProject:scr('project'), isChess:scr('chess'), isApt:scr('apartment'), isMortgage:scr('mortgage'), isOnline:scr('online'), isNews:scr('news'),
+      featuredNews, sideNews, news:newsView, backHome:()=>this.go('home'),
+      homeClsOpts, homeRoomOpts, homePriceLabel, homeResultCount, homeResetFilters,
+      quicklinks, homeProjects, catalogProjects, catClassOpts, catStatusOpts,
+      proj:projView, amenities, projFeatHovli, projFeatHall, projFeatCowork, goChess:()=>this.startChess(), openProjBack:()=>this.openProject(p.id),
+      steps, chessA:s.chessStep==='A', chessB:s.chessStep==='B', chessC:s.chessStep==='C',
+      blocks, facadeFloors, entrances, blockId:s.blockId, entrance:s.entrance,
+      floors, freeCount, listCells:listCellsV, isGridView:s.chessView==='grid', isListView:s.chessView==='list',
+      setGrid:()=>this.setState({chessView:'grid'}), setList:()=>this.setState({chessView:'list'}),
+      gridBtnStyle:vbtn(s.chessView==='grid'), listBtnStyle:vbtn(s.chessView==='list'),
+      roomOpts, resetFilters:()=>this.resetFilters(),
+      areaLabel:'\u2264 '+s.flt.area, priceLabel:'\u2264 '+s.flt.price, floorLabel:'\u2265 '+s.flt.floor,
+      backToChess:()=>this.setState({screen:'chess', chessStep:'C'}),
+      apt:{ ...apt, floor:apt.f, statusLabel:aptStatus.label, statusColor:aptStatus.color, statusBg:aptStatus.bg }, aptBlock:s.aptBlock,
+      miniFloors, similar,
+      mortDownLabel:s.mort.down+'%', mortTermLabel:s.mort.term+' yil',
+      mortMonthly:(mMonthly/1e6).toFixed(1)+' mln', mortLoan:this.fmt(mLoan)+' mln',
+      banks, mgPriceLabel:s.mg.price+' mln', mgDownLabel:s.mg.down+'%', mgTermLabel:s.mg.term+' yil',
+      mgMonthly:(mgMonthly/1e6).toFixed(1)+' mln', mgLoan:this.fmt(mgLoan)+' mln',
+      onlineSteps, reviews
+    };
+  }
+}
+</script>
+
+
+</body></html>

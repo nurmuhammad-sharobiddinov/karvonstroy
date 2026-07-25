@@ -1,0 +1,122 @@
+{
+  "15ec1d24-c51b-4d19-9a00-5d076d453e75": {
+    "file": "assets/15ec1d24-c51b-4d19-9a00-5d076d453e75.svg",
+    "mime": "image/svg+xml",
+    "bytes": 8800,
+    "extResource": null
+  },
+  "398ba697-fbc2-4576-ae76-e5a4a91ab9fe": {
+    "file": "assets/398ba697-fbc2-4576-ae76-e5a4a91ab9fe.webp",
+    "mime": "image/webp",
+    "bytes": 98410,
+    "extResource": null
+  },
+  "1e1c14da-4fc1-4fe9-86f6-49a047dd8faa": {
+    "file": "assets/1e1c14da-4fc1-4fe9-86f6-49a047dd8faa.webp",
+    "mime": "image/webp",
+    "bytes": 161876,
+    "extResource": null
+  },
+  "3170141b-f68a-4246-ba9c-949e0f9dbf0e": {
+    "file": "assets/3170141b-f68a-4246-ba9c-949e0f9dbf0e.webp",
+    "mime": "image/webp",
+    "bytes": 146310,
+    "extResource": null
+  },
+  "78c8dfa9-e313-4cab-9151-171bfd56b6df": {
+    "file": "assets/78c8dfa9-e313-4cab-9151-171bfd56b6df.webp",
+    "mime": "image/webp",
+    "bytes": 131530,
+    "extResource": null
+  },
+  "f8aa6c3e-c1c8-489e-85a5-48220d7c44b3": {
+    "file": "assets/f8aa6c3e-c1c8-489e-85a5-48220d7c44b3.webp",
+    "mime": "image/webp",
+    "bytes": 195816,
+    "extResource": null
+  },
+  "db272854-3a96-4d88-b012-95043bcd7b13": {
+    "file": "assets/db272854-3a96-4d88-b012-95043bcd7b13.js",
+    "mime": "text/javascript",
+    "bytes": 63740,
+    "extResource": null
+  },
+  "34c0e6ab-cf8f-4a8b-b07e-c580d699e825": {
+    "file": "assets/34c0e6ab-cf8f-4a8b-b07e-c580d699e825.js",
+    "mime": "text/javascript",
+    "bytes": 64222,
+    "extResource": null
+  },
+  "a16fc9e0-a721-491b-9292-c1d18cc85b8a": {
+    "file": "assets/a16fc9e0-a721-491b-9292-c1d18cc85b8a.js",
+    "mime": "text/javascript",
+    "bytes": 10751,
+    "extResource": "https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+  },
+  "5ade2247-6cb0-4231-a251-d70242424d72": {
+    "file": "assets/5ade2247-6cb0-4231-a251-d70242424d72.js",
+    "mime": "text/javascript",
+    "bytes": 131835,
+    "extResource": "https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+  },
+  "3081f4a3-48cb-4817-9ec2-113ba0246d65": {
+    "file": "assets/3081f4a3-48cb-4817-9ec2-113ba0246d65.woff2",
+    "mime": "font/woff2",
+    "bytes": 17508,
+    "extResource": null
+  },
+  "c0288fef-2a34-47b4-a753-6e01da2b1026": {
+    "file": "assets/c0288fef-2a34-47b4-a753-6e01da2b1026.woff2",
+    "mime": "font/woff2",
+    "bytes": 22032,
+    "extResource": null
+  },
+  "72e4d438-86bf-4435-a432-1d2c75c33ee1": {
+    "file": "assets/72e4d438-86bf-4435-a432-1d2c75c33ee1.woff2",
+    "mime": "font/woff2",
+    "bytes": 19180,
+    "extResource": null
+  },
+  "e22c40b0-f425-428e-a034-86be63ecee1d": {
+    "file": "assets/e22c40b0-f425-428e-a034-86be63ecee1d.woff2",
+    "mime": "font/woff2",
+    "bytes": 37916,
+    "extResource": null
+  },
+  "64f326dc-38d4-4da5-83a6-f384d0380547": {
+    "file": "assets/64f326dc-38d4-4da5-83a6-f384d0380547.woff2",
+    "mime": "font/woff2",
+    "bytes": 2552,
+    "extResource": null
+  },
+  "1b7728f7-572d-4751-bf03-327ed847b627": {
+    "file": "assets/1b7728f7-572d-4751-bf03-327ed847b627.woff2",
+    "mime": "font/woff2",
+    "bytes": 14500,
+    "extResource": null
+  },
+  "f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0": {
+    "file": "assets/f4b00bdc-d383-4e3c-8277-d2cbbe9c86f0.woff2",
+    "mime": "font/woff2",
+    "bytes": 9444,
+    "extResource": null
+  },
+  "7df2746f-0d45-4f9c-b749-9f52ba22a86c": {
+    "file": "assets/7df2746f-0d45-4f9c-b749-9f52ba22a86c.woff2",
+    "mime": "font/woff2",
+    "bytes": 8520,
+    "extResource": null
+  },
+  "d77ab9c0-54e9-4632-ab03-237a06b6bc79": {
+    "file": "assets/d77ab9c0-54e9-4632-ab03-237a06b6bc79.woff2",
+    "mime": "font/woff2",
+    "bytes": 15120,
+    "extResource": null
+  },
+  "e629f011-a93e-40f3-b926-753ccf330a83": {
+    "file": "assets/e629f011-a93e-40f3-b926-753ccf330a83.woff2",
+    "mime": "font/woff2",
+    "bytes": 24836,
+    "extResource": null
+  }
+}
