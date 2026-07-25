@@ -78,7 +78,7 @@ export default function Catalog() {
               </div>
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--line)' }}>
                 <div style={{ fontFamily: 'var(--font-manrope)', fontWeight: 700, fontSize: 18, color: 'var(--ink)' }}>{p.priceFrom} mln so‘mdan</div>
-                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: 14 }}>Batafsil →</span>
+                <span style={{ color: 'var(--blue)', fontWeight: 600, fontSize: 14 }}>Batafsil</span>
               </div>
             </div>
           </div>

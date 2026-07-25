@@ -99,7 +99,7 @@ export default function MapEmbed({
           backdropFilter: 'blur(6px)',
         }}
       >
-        Kattaroq xarita ↗
+        Kattaroq xarita
       </a>
     </div>
   );
