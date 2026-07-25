@@ -75,7 +75,7 @@ export const ONLINE_STEPS: OnlineStep[] = [
 export type News = { id: string; cat: string; date: string; img: string; title: string; excerpt: string; body: string[] };
 export const NEWS: News[] = [
   {
-    id: 'n1', cat: 'Sotuvlar', date: '8 Iyul 2026', img: '/img/slide-2.png',
+    id: 'n1', cat: 'Sotuvlar', date: '8 Iyul 2026', img: '/img/news-1.png',
     title: 'Oq Daryo majmuasida yangi blok sotuvi boshlandi',
     excerpt: 'C blokdagi studiyadan 4 xonaligacha kvartiralar endi shaxmatka orqali onlayn tanlash uchun ochiq.',
     body: [
@@ -85,7 +85,7 @@ export const NEWS: News[] = [
     ],
   },
   {
-    id: 'n2', cat: 'Tadbirlar', date: '1 Iyul 2026', img: '/img/slide-1.png',
+    id: 'n2', cat: 'Tadbirlar', date: '1 Iyul 2026', img: '/img/news-2.png',
     title: 'Yangi savdo-xizmat markazi tantanali ochildi',
     excerpt: 'Majmua hududida rezidentlar uchun yangi ijtimoiy infratuzilma ob’ekti foydalanishga topshirildi.',
     body: [
@@ -95,7 +95,7 @@ export const NEWS: News[] = [
     ],
   },
   {
-    id: 'n3', cat: 'Kompaniya', date: '24 Iyun 2026', img: '/img/slide-3.png',
+    id: 'n3', cat: 'Kompaniya', date: '24 Iyun 2026', img: '/img/news-3.png',
     title: 'Karvon Stroy hamkor banklar ro‘yxatini kengaytirdi',
     excerpt: 'Endi yetakchi banklar bilan hamkorlikda 15% boshlang‘ich to‘lov bilan ipoteka rasmiylashtirish mumkin.',
     body: [
