@@ -9,7 +9,8 @@ import Icon from '../Icon';
 import MapEmbed from '../MapEmbed';
 import Chess from './Chess';
 
-const gallery = (pid: string) => [PROJECT_IMG[pid], HERO_SLIDES[0], HERO_SLIDES[2]];
+// Loyiha galereyasi — faqat toza bino renderlari (promo poster EMAS)
+const gallery = (pid: string) => [PROJECT_IMG[pid], HERO_SLIDES[0], HERO_SLIDES[3]];
 
 export default function Project({ project: p }: { project: ProjectType }) {
   const { actions } = useApp();
