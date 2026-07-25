@@ -35,27 +35,26 @@ export default function Project({ project: p }: { project: ProjectType }) {
         </div>
       </div>
 
-      {/* hero */}
-      <div style={{ position: 'relative', width: '100%', height: 'clamp(300px,52vh,660px)', overflow: 'hidden', background: '#0A1220' }}>
+      {/* hero — bosh sahifadagidek: rasm to'liq ko'rinadi (2:1) */}
+      <div style={{ position: 'relative', width: '100%', aspectRatio: '1456 / 720', overflow: 'hidden', background: '#0A1220' }}>
         {g.map((src, i) => (
           <div key={i} style={{ position: 'absolute', inset: 0, opacity: i === pj ? 1 : 0, transition: 'opacity .8s ease' }}>
             <Image src={src} alt={p.name} fill sizes="100vw" priority={i === 0} style={{ objectFit: 'cover' }} />
           </div>
         ))}
-        <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(0deg,rgba(8,15,28,.82),rgba(8,15,28,.02) 46%,rgba(8,15,28,.22))', pointerEvents: 'none' }} />
-        <div style={{ position: 'absolute', left: 0, right: 0, bottom: 0 }}>
-          <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 clamp(14px,3vw,32px) clamp(28px,5vh,52px)', color: '#fff' }}>
-            <span style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', fontSize: 12.5, fontWeight: 700, padding: '7px 14px', borderRadius: 8, marginBottom: 16 }}>{p.cls}</span>
-            <h1 style={{ fontWeight: 800, fontSize: 'clamp(30px,5vw,64px)', letterSpacing: '-.02em', margin: '0 0 6px', lineHeight: 1, textShadow: '0 2px 20px rgba(0,0,0,.4)' }}>{p.name}</h1>
-            <div style={{ fontSize: 15, color: 'rgba(255,255,255,.9)', marginBottom: 10 }}>Eng yaqin topshirilish muddati <b>{p.deadline}</b></div>
-            <div style={{ fontSize: 14, color: 'rgba(255,255,255,.82)', display: 'flex', alignItems: 'center', gap: 6 }}>◉ {address}</div>
-          </div>
-        </div>
-        <div style={{ position: 'absolute', right: 'clamp(14px,3vw,32px)', bottom: 'clamp(28px,5vh,52px)', display: 'flex', alignItems: 'center', gap: 10 }}>
-          <button onClick={() => actions.showToast('Fotogalereya ochilmoqda')} style={{ border: 'none', background: 'rgba(15,24,38,.72)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '11px 16px', borderRadius: 11, cursor: 'pointer', backdropFilter: 'blur(6px)', display: 'flex', alignItems: 'center', gap: 7 }}>▦ {g.length} ta surat</button>
+        <div style={{ position: 'absolute', right: 'clamp(12px,3vw,24px)', bottom: 'clamp(12px,3vw,20px)', display: 'flex', alignItems: 'center', gap: 8 }}>
+          <button onClick={() => actions.showToast('Fotogalereya ochilmoqda')} style={{ border: 'none', background: 'rgba(15,24,38,.72)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '10px 14px', borderRadius: 11, cursor: 'pointer', backdropFilter: 'blur(6px)', display: 'flex', alignItems: 'center', gap: 7 }}>▦ {g.length} ta surat</button>
           <button onClick={() => setPj((v) => (v - 1 + g.length) % g.length)} style={pjBtn}>‹</button>
           <button onClick={() => setPj((v) => (v + 1) % g.length)} style={pjBtn}>›</button>
         </div>
+      </div>
+
+      {/* sarlavha bloki — rasm tagida */}
+      <div style={{ maxWidth: 1320, margin: '0 auto', padding: 'clamp(18px,2.5vw,28px) clamp(14px,3vw,32px) 0' }}>
+        <span style={{ display: 'inline-block', background: 'var(--blue)', color: '#fff', fontSize: 12.5, fontWeight: 700, padding: '7px 14px', borderRadius: 8, marginBottom: 12 }}>{p.cls}</span>
+        <h1 style={{ fontWeight: 800, fontSize: 'clamp(28px,5vw,56px)', letterSpacing: '-.02em', margin: '0 0 8px', lineHeight: 1.05, color: 'var(--ink)' }}>{p.name}</h1>
+        <div style={{ fontSize: 15, color: 'var(--slate)', marginBottom: 6 }}>Eng yaqin topshirilish muddati <b style={{ color: 'var(--ink)' }}>{p.deadline}</b></div>
+        <div style={{ fontSize: 14, color: 'var(--slate)', display: 'flex', alignItems: 'center', gap: 6 }}>◉ {address}</div>
       </div>
 
       {/* specs strip */}
@@ -81,8 +80,14 @@ export default function Project({ project: p }: { project: ProjectType }) {
             {p.name} — bu shunchaki turar-joy majmuasi emas, balki hayot uchun mukammal muhit. {p.district} tumanida joylashgan majmua zamonaviy arxitektura, yopiq va xavfsiz hovli, mashinasiz hudud konsepsiyasi hamda {p.cls} klassidagi pardozlashni o‘zida jamlagan. Bu yerda har bir tafsilot yashovchilar qulayligi uchun o‘ylab ishlangan.
           </p>
           <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 'clamp(40px,5vw,64px)' }}>
-            <button onClick={() => actions.showToast('Buklet yuklab olindi (PDF)')} style={{ border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 14.5, fontWeight: 600, padding: '14px 24px', borderRadius: 12, cursor: 'pointer', boxShadow: '0 8px 22px rgba(0,96,254,.25)' }}>⬇ Buklet yuklab olish</button>
-            <button onClick={() => actions.showToast('Video prezentatsiya ochilmoqda')} style={{ border: '1px solid var(--line)', background: '#fff', color: 'var(--ink)', fontSize: 14.5, fontWeight: 600, padding: '14px 22px', borderRadius: 12, cursor: 'pointer' }}>▶ Video prezentatsiya</button>
+            <button onClick={() => actions.showToast('Buklet yuklab olindi (PDF)')} style={{ display: 'inline-flex', alignItems: 'center', gap: 9, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 14.5, fontWeight: 600, padding: '14px 24px', borderRadius: 12, cursor: 'pointer', boxShadow: '0 8px 22px rgba(0,96,254,.25)' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+              Buklet yuklab olish
+            </button>
+            <button onClick={() => actions.showToast('Video prezentatsiya ochilmoqda')} style={{ display: 'inline-flex', alignItems: 'center', gap: 9, border: '1px solid var(--line)', background: '#fff', color: 'var(--ink)', fontSize: 14.5, fontWeight: 600, padding: '14px 22px', borderRadius: 12, cursor: 'pointer' }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none" /></svg>
+              Video prezentatsiya
+            </button>
           </div>
 
           <Feature img={g[0]} kicker="Ichki hovli" title="Mashinasiz yashil hovli" desc="Hovli to‘liq piyodalar uchun mo‘ljallangan. Boy landshaft, soyabon daraxtlar, oqar suv va bolalar uchun xavfsiz zonalar — bularning barchasi bir joyda." feats={FEAT_HOVLI} />
@@ -172,7 +177,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
           <div>
             <h3 style={{ fontWeight: 800, fontSize: 'clamp(24px,3vw,38px)', margin: '0 0 16px' }}>Sotuv ofisiga tashrif buyuring</h3>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'rgba(255,255,255,.7)', margin: '0 0 26px', maxWidth: '44ch' }}>{p.name} bo‘yicha barcha savollaringizga menejerlarimiz javob beradi. Har kuni 9:00–19:00.</p>
-            <button onClick={openChess} style={{ marginTop: 0, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>Kvartira tanlash</button>
+            <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>☎ 1360 — qo‘ng‘iroq qiling</a>
           </div>
           <div style={{ position: 'relative', borderRadius: 18, overflow: 'hidden', aspectRatio: '16/11', border: '1px solid rgba(255,255,255,.12)', background: '#0f1826' }}>
             <MapEmbed dark />
