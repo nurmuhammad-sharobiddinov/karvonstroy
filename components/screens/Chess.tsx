@@ -346,7 +346,7 @@ function StepA({ p, totalFree, onPick }: { p: any; totalFree: number; onPick: (b
         <div style={{ position: 'absolute', left: '6%', bottom: '9%', width: '40%', height: 16, background: '#C9D2CB', borderRadius: 8 }} />
         <div style={{ position: 'absolute', right: '8%', top: '14%', width: 90, height: 90, borderRadius: '50%', background: 'rgba(23,178,106,.14)', border: '1px dashed rgba(23,178,106,.4)' }} />
         <div style={{ position: 'absolute', left: '46%', top: '10%', width: 60, height: 60, borderRadius: '50%', background: 'rgba(23,178,106,.12)' }} />
-        <div style={{ position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 'clamp(18px,3vw,44px)', alignItems: 'flex-end', justifyContent: 'center', minHeight: 340 }}>
+        <div className="mk-genplan" style={{ position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 'clamp(18px,3vw,44px)', alignItems: 'flex-end', justifyContent: 'center', minHeight: 340 }}>
           {blocks.map((b: any) => {
             const dead = b.free === 0;
             return (
@@ -378,6 +378,18 @@ function StepA({ p, totalFree, onPick }: { p: any; totalFree: number; onPick: (b
           transform: translateY(-2px);
           box-shadow: 0 16px 40px rgba(0, 96, 254, 0.3) !important;
           filter: brightness(1.06);
+        }
+        @media (max-width: 560px) {
+          .mk-genplan {
+            gap: 12px !important;
+            min-height: 0 !important;
+            align-items: stretch !important;
+          }
+          .mk-block,
+          .mk-block-dead {
+            width: clamp(130px, 43vw, 170px) !important;
+            height: 158px !important;
+          }
         }
       `}</style>
     </div>
