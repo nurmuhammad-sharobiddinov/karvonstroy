@@ -24,17 +24,25 @@ const COLS = ['Studiya', '1x', '2x', '3x', '2x'];
 const ROOM_OPTS: [number, string][] = [[0, 'Studiya'], [1, '1x'], [2, '2x'], [3, '3x'], [4, '4x+']];
 const BLOCK_HEIGHTS = [230, 300, 200, 265, 320];
 
-export default function Chess({ projectId }: { projectId: string }) {
+export default function Chess({ projectId, embedded = false }: { projectId: string; embedded?: boolean }) {
   const { state, actions } = useApp();
   const router = useRouter();
   const sp = useSearchParams();
   const p = PROJECTS.find((x) => x.id === projectId) || PROJECTS[0];
   const totalFree = projTotalFree(p);
 
-  // ---- identity from the URL query ---------------------------------------
-  const blokParam = sp.get('blok');
+  // ---- identity: URL query (page mode) OR local state (embedded mode) ------
+  const [localQ, setLocalQ] = useState<Record<string, string>>({});
+  const readParam = (k: string): string | null => (embedded ? localQ[k] ?? null : sp.get(k));
+  const parseQ = (q?: string): Record<string, string> => {
+    const o: Record<string, string> = {};
+    if (q) for (const part of q.split('&')) { const [k, v] = part.split('='); if (k) o[k] = decodeURIComponent(v ?? ''); }
+    return o;
+  };
+
+  const blokParam = readParam('blok');
   const block = blokParam && (p.blocks || []).includes(blokParam) ? blokParam : null;
-  const entParam = parseInt(sp.get('podyezd') || '', 10);
+  const entParam = parseInt(readParam('podyezd') || '', 10);
   const entrance = block && entParam >= 1 && entParam <= p.entrances ? entParam : null;
   const step: 'A' | 'B' | 'C' = !block ? 'A' : !entrance ? 'B' : 'C';
 
@@ -43,8 +51,11 @@ export default function Chess({ projectId }: { projectId: string }) {
   const rows = useMemo(() => genFloors(p, effBlock, effEnt), [p, effBlock, effEnt]);
   const bounds = useMemo(() => computeBounds(rows), [rows]);
 
-  // ---- URL navigation (replace, no scroll) --------------------------------
-  const nav = (q?: string) => router.replace(routes.chess(p.id, q), { scroll: false });
+  // ---- navigation: URL replace (page) or local state (embedded) -----------
+  const nav = (q?: string) => {
+    if (embedded) { setLocalQ(parseQ(q)); return; }
+    router.replace(routes.chess(p.id, q), { scroll: false });
+  };
   const selBlock = (b: string) => nav(`blok=${b}`);
   const selEntrance = (e: number) => nav(`blok=${effBlock}&podyezd=${e}`);
   const backToA = () => nav();
@@ -70,7 +81,7 @@ export default function Chess({ projectId }: { projectId: string }) {
     if (initKey.current === key) return;
     initKey.current = key;
     const base = fullFilter();
-    const xona = (sp.get('xona') || '').split(',').map(Number).filter((n) => !Number.isNaN(n));
+    const xona = (readParam('xona') || '').split(',').map(Number).filter((n) => !Number.isNaN(n));
     if (xona.length) base.rooms = xona;
     setCf(base);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,11 +90,11 @@ export default function Chess({ projectId }: { projectId: string }) {
   // write ?xona when room chips change (step C only)
   useEffect(() => {
     if (step !== 'C') return;
-    const cur = sp.get('xona') || '';
+    const cur = readParam('xona') || '';
     const next = cf.rooms.join(',');
     if (cur === next) return;
     const q = `blok=${effBlock}&podyezd=${effEnt}` + (next ? `&xona=${next}` : '');
-    router.replace(routes.chess(p.id, q), { scroll: false });
+    nav(q);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cf.rooms, step]);
 
@@ -132,9 +143,9 @@ export default function Chess({ projectId }: { projectId: string }) {
   const listSorted = useMemo(() => [...matched].sort((a, b) => (sortVal(a, sort.key) - sortVal(b, sort.key)) * sort.dir), [matched, sort]);
 
   return (
-    <section className="mk-screen" style={{ maxWidth: 1320, margin: '0 auto', padding: 'clamp(18px,2.4vw,28px) clamp(14px,3vw,32px) clamp(40px,5vw,70px)' }}>
+    <section className="mk-screen" style={{ maxWidth: 1320, margin: '0 auto', padding: embedded ? '0' : 'clamp(18px,2.4vw,28px) clamp(14px,3vw,32px) clamp(40px,5vw,70px)' }}>
       {/* breadcrumb / stepper */}
-      <Breadcrumb p={p} step={step} block={block} entrance={entrance} onProject={() => actions.goProject(p.id)} onBackA={backToA} onBackB={backToB} />
+      <Breadcrumb p={p} step={step} block={block} entrance={entrance} onProject={embedded ? backToA : () => actions.goProject(p.id)} onBackA={backToA} onBackB={backToB} />
 
       {step === 'A' && <StepA p={p} totalFree={totalFree} onPick={selBlock} />}
       {step === 'B' && <StepB p={p} block={effBlock} onPick={selEntrance} onBack={backToA} />}

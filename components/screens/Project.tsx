@@ -1,12 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, Suspense } from 'react';
 import Image from 'next/image';
 import { useApp } from '@/store/AppContext';
 import { PROJECT_IMG, HERO_SLIDES, FEAT_HOVLI, FEAT_HALL, FEAT_COWORK, REVIEWS, type Feat, type Project as ProjectType } from '@/lib/data';
 import { projStatusColor, projTotalFree } from '@/lib/chess';
 import Icon from '../Icon';
 import MapEmbed from '../MapEmbed';
+import Chess from './Chess';
 
 const gallery = (pid: string) => [PROJECT_IMG[pid], HERO_SLIDES[0], HERO_SLIDES[2]];
 
@@ -16,6 +17,14 @@ export default function Project({ project: p }: { project: ProjectType }) {
   const g = gallery(p.id);
   const [pj, setPj] = useState(0);
   const address = 'Toshkent, ' + p.district + ' tumani';
+
+  // inline shaxmatka — "Kvartira tanlash" bosilganda shu sahifada ochiladi
+  const [showChess, setShowChess] = useState(false);
+  const chessRef = useRef<HTMLDivElement>(null);
+  const openChess = () => {
+    setShowChess(true);
+    requestAnimationFrame(() => chessRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
 
   return (
     <section className="mk-screen">
@@ -108,7 +117,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
           <div style={{ fontSize: 13, color: 'var(--mute)' }}>Narxi</div>
           <div style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 'clamp(26px,3vw,32px)', color: 'var(--ink)', margin: '4px 0 2px' }}>{p.priceFrom} mln <span style={{ fontSize: 15, fontWeight: 600, color: 'var(--slate)' }}>so‘mdan</span></div>
           <div style={{ fontSize: 13, color: 'var(--slate)', marginBottom: 20 }}>Studiyadan 4 xonaligacha · {projTotalFree(p)} ta bo‘sh</div>
-          <button onClick={() => actions.goChess(p.id)} style={{ width: '100%', border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 16, fontWeight: 700, padding: 16, borderRadius: 12, cursor: 'pointer', boxShadow: '0 8px 22px rgba(0,96,254,.28)', marginBottom: 10 }}>Kvartira tanlash →</button>
+          <button onClick={openChess} style={{ width: '100%', border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 16, fontWeight: 700, padding: 16, borderRadius: 12, cursor: 'pointer', boxShadow: '0 8px 22px rgba(0,96,254,.28)', marginBottom: 10 }}>Kvartira tanlash</button>
           <button onClick={() => actions.goMortgage()} style={{ width: '100%', border: '1px solid var(--line)', background: '#fff', color: 'var(--ink)', fontSize: 15, fontWeight: 600, padding: 14, borderRadius: 12, cursor: 'pointer', marginBottom: 20 }}>Ipotekani hisoblash</button>
           <div style={{ borderTop: '1px solid var(--line)', paddingTop: 18, display: 'flex', flexDirection: 'column', gap: 12, fontSize: 14 }}>
             <Row k="Topshirish" v={p.deadline} />
@@ -120,6 +129,21 @@ export default function Project({ project: p }: { project: ProjectType }) {
             <a href="tel:1360" style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 22, color: 'var(--blue)' }}>☎ 1360</a>
           </div>
         </aside>
+      </div>
+
+      {/* inline shaxmatka — "Kvartira tanlash" bosilganda shu yerda ochiladi */}
+      <div ref={chessRef} id="shaxmatka" style={{ scrollMarginTop: 'calc(var(--header-h) + 12px)' }}>
+        {showChess && (
+          <div style={{ background: 'var(--soft)', borderTop: '1px solid var(--line)' }}>
+            <div style={{ maxWidth: 1320, margin: '0 auto', padding: 'clamp(32px,4vw,56px) clamp(14px,3vw,32px)' }}>
+              <h2 style={{ fontWeight: 800, fontSize: 'clamp(24px,3vw,38px)', letterSpacing: '-.02em', margin: '0 0 6px', color: 'var(--ink)' }}>Kvartirani tanlang</h2>
+              <p style={{ fontSize: 15, color: 'var(--slate)', margin: '0 0 24px' }}>Blok va pod‘yezdni tanlab, bo‘sh kvartiralarni ko‘ring.</p>
+              <Suspense fallback={<div style={{ padding: 40, textAlign: 'center', color: 'var(--mute)' }}>Yuklanmoqda…</div>}>
+                <Chess projectId={p.id} embedded />
+              </Suspense>
+            </div>
+          </div>
+        )}
       </div>
 
       {/* reviews */}
@@ -147,7 +171,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
           <div>
             <h3 style={{ fontWeight: 800, fontSize: 'clamp(24px,3vw,38px)', margin: '0 0 16px' }}>Sotuv ofisiga tashrif buyuring</h3>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'rgba(255,255,255,.7)', margin: '0 0 26px', maxWidth: '44ch' }}>{p.name} bo‘yicha barcha savollaringizga menejerlarimiz javob beradi. Har kuni 9:00–19:00.</p>
-            <button onClick={() => actions.goChess(p.id)} style={{ marginTop: 0, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>Kvartira tanlash</button>
+            <button onClick={openChess} style={{ marginTop: 0, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>Kvartira tanlash</button>
           </div>
           <div style={{ position: 'relative', borderRadius: 18, overflow: 'hidden', aspectRatio: '16/11', border: '1px solid rgba(255,255,255,.12)', background: '#0f1826' }}>
             <MapEmbed dark />

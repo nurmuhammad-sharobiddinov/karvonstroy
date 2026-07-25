@@ -78,40 +78,41 @@ export default function Home() {
       <div style={{ maxWidth: 1320, margin: '0 auto', padding: 'clamp(50px,7vw,100px) clamp(14px,3vw,32px) clamp(30px,4vw,50px)' }}>
         <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, marginBottom: 'clamp(28px,4vw,44px)', flexWrap: 'wrap' }}>
           <div>
-            <Eyebrow>Portfel</Eyebrow>
             <h2 style={{ fontWeight: 800, fontSize: 'clamp(28px,3.6vw,46px)', letterSpacing: '-.025em', margin: 0, color: 'var(--ink)' }}>Bizning loyihalar</h2>
           </div>
-          <button onClick={() => actions.goCatalog()} style={outlineBtn}>Barcha loyihalar <span>→</span></button>
+          <button onClick={() => actions.goCatalog()} style={outlineBtn}>Barcha loyihalar</button>
         </div>
 
         {/* search + filter */}
         <div style={{ background: '#fff', border: '1px solid var(--line)', borderRadius: 18, boxShadow: 'var(--shadow-sm)', padding: 'clamp(16px,2vw,22px)', marginBottom: 'clamp(22px,3vw,32px)' }}>
-          <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap', alignItems: 'center' }}>
-            <div style={{ flex: 1, minWidth: 220, display: 'flex', alignItems: 'center', gap: 10, background: 'var(--soft)', border: '1px solid var(--line)', borderRadius: 12, padding: '0 14px' }}>
-              <span style={{ color: 'var(--mute)', fontSize: 16 }}>⌕</span>
-              <input value={state.hsearch} onChange={(e) => actions.set({ hsearch: e.target.value })} placeholder="Loyiha yoki tuman bo‘yicha qidirish…" style={{ flex: 1, border: 'none', background: 'transparent', padding: '13px 0', fontSize: 15, outline: 'none', color: 'var(--ink)' }} />
-            </div>
-            <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
-              {clsOpts.map(([v, l]) => (
-                <button key={v} onClick={() => actions.set({ hcls: v })} style={chip(state.hcls === v)}>{l}</button>
-              ))}
-            </div>
+          {/* search */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10, background: 'var(--soft)', border: '1px solid var(--line)', borderRadius: 12, padding: '0 14px' }}>
+            <span style={{ color: 'var(--mute)', fontSize: 16 }}>⌕</span>
+            <input value={state.hsearch} onChange={(e) => actions.set({ hsearch: e.target.value })} placeholder="Loyiha yoki tuman bo‘yicha qidirish…" style={{ flex: 1, minWidth: 0, border: 'none', background: 'transparent', padding: '13px 0', fontSize: 15, outline: 'none', color: 'var(--ink)' }} />
           </div>
-          <div style={{ display: 'flex', gap: 20, flexWrap: 'wrap', alignItems: 'center', marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--line)' }}>
+          {/* klass chiplari — bitta surib ko'riladigan qator */}
+          <div className="mk-chiprow" style={{ marginTop: 14 }}>
+            {clsOpts.map(([v, l]) => (
+              <button key={v} onClick={() => actions.set({ hcls: v })} style={chip(state.hcls === v)}>{l}</button>
+            ))}
+          </div>
+          <div style={{ marginTop: 16, paddingTop: 16, borderTop: '1px solid var(--line)', display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {/* xonalar — surib ko'riladigan qator */}
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--slate)' }}>Xonalar:</span>
-              <div style={{ display: 'flex', gap: 6, flexWrap: 'wrap' }}>
+              <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--slate)', whiteSpace: 'nowrap' }}>Xonalar:</span>
+              <div className="mk-chiprow" style={{ flex: 1, minWidth: 0 }}>
                 {roomOpts.map(([v, l]) => (
                   <button key={String(v)} onClick={() => actions.set({ hrooms: v })} style={chip(state.hrooms === v)}>{l}</button>
                 ))}
               </div>
             </div>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 12, flex: 1, minWidth: 220 }}>
+            {/* narx */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--slate)', whiteSpace: 'nowrap' }}>Narx, mln so‘mgacha:</span>
-              <input type="range" min={300} max={1500} step={20} value={state.hprice} onChange={(e) => actions.set({ hprice: +e.target.value })} style={{ flex: 1, minWidth: 120 }} />
-              <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--blue)', minWidth: 64 }}>{priceLabel}</span>
+              <input type="range" min={300} max={1500} step={20} value={state.hprice} onChange={(e) => actions.set({ hprice: +e.target.value })} style={{ flex: 1, minWidth: 60 }} />
+              <span style={{ fontSize: 14, fontWeight: 700, color: 'var(--blue)', minWidth: 40, textAlign: 'right' }}>{priceLabel}</span>
             </div>
-            <button onClick={actions.resetHomeFilters} style={{ border: '1px solid var(--line)', background: '#fff', color: 'var(--slate)', fontSize: 13, fontWeight: 600, padding: '10px 16px', borderRadius: 10, cursor: 'pointer', whiteSpace: 'nowrap' }}>Tozalash</button>
+            <button onClick={actions.resetHomeFilters} style={{ alignSelf: 'flex-start', border: '1px solid var(--line)', background: '#fff', color: 'var(--slate)', fontSize: 13, fontWeight: 600, padding: '10px 16px', borderRadius: 10, cursor: 'pointer', whiteSpace: 'nowrap' }}>Tozalash</button>
           </div>
         </div>
 
@@ -148,9 +149,8 @@ export default function Home() {
                   <span style={{ background: 'var(--blue-050)', color: 'var(--blue)', fontSize: 12, fontWeight: 600, padding: '5px 10px', borderRadius: 7 }}>Studiya–4 xona</span>
                   <span style={{ background: '#E7F8F0', color: 'var(--free)', fontSize: 12, fontWeight: 600, padding: '5px 10px', borderRadius: 7 }}>{p.free} ta bo‘sh</span>
                 </div>
-                <div style={{ display: 'flex', gap: 10, marginTop: 'auto' }}>
-                  <button onClick={() => actions.goProject(p.id)} style={{ flex: 1, border: '1px solid var(--line)', background: '#fff', color: 'var(--ink)', fontSize: 13.5, fontWeight: 600, padding: 12, borderRadius: 11, cursor: 'pointer' }}>Batafsil</button>
-                  <button onClick={() => actions.goChess(p.id)} style={{ flex: 1, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 13.5, fontWeight: 600, padding: 12, borderRadius: 11, cursor: 'pointer', boxShadow: '0 6px 18px rgba(0,96,254,.25)' }}>Shaxmatka</button>
+                <div style={{ display: 'flex', marginTop: 'auto' }}>
+                  <button onClick={() => actions.goProject(p.id)} style={{ flex: 1, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 14, fontWeight: 600, padding: 13, borderRadius: 11, cursor: 'pointer', boxShadow: '0 6px 18px rgba(0,96,254,.25)' }}>Batafsil</button>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function Home() {
             <Eyebrow>Media markaz</Eyebrow>
             <h2 style={{ fontWeight: 800, fontSize: 'clamp(28px,3.6vw,46px)', letterSpacing: '-.025em', margin: 0, color: 'var(--ink)' }}>Yangiliklar</h2>
           </div>
-          <button onClick={() => actions.goNews('n1')} style={outlineBtn}>Barcha yangiliklar <span>→</span></button>
+          <button onClick={() => actions.goNews('n1')} style={outlineBtn}>Barcha yangiliklar</button>
         </div>
         <div className="mk-newsgrid" style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr', gap: 'clamp(16px,2vw,26px)', alignItems: 'stretch' }}>
           <div onClick={() => actions.goNews(featured.id)} className="mk-card" style={{ position: 'relative', borderRadius: 22, overflow: 'hidden', cursor: 'pointer', minHeight: 340, background: '#0A1220' }}>
@@ -237,6 +237,17 @@ export default function Home() {
         .mk-projcard:hover .mk-projimg { transform: scale(1.05); }
         .mk-card:hover { box-shadow: 0 24px 60px rgba(15,24,38,.16); transform: translateY(-4px); }
         @media (max-width: 780px) { .mk-newsgrid { grid-template-columns: 1fr !important; } }
+        .mk-chiprow {
+          display: flex;
+          gap: 8px;
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 2px;
+        }
+        .mk-chiprow::-webkit-scrollbar { display: none; }
+        .mk-chiprow > button { flex: 0 0 auto; white-space: nowrap; }
       `}</style>
     </section>
   );
