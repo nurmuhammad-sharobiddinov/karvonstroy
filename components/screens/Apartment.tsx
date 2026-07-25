@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useApp } from '@/store/AppContext';
 import { PROJECTS, BANKS } from '@/lib/data';
@@ -48,8 +49,9 @@ export default function Apartment({ cell: apt }: { cell: Cell }) {
       <div className="mk-aptgrid" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.5fr) minmax(min(100%,300px),1fr)', gap: 'clamp(24px,3vw,44px)', alignItems: 'start' }}>
         {/* plan + mini chess */}
         <div>
-          <div style={{ position: 'relative', background: 'var(--soft)', border: '1px solid var(--line)', borderRadius: 18, overflow: 'hidden', aspectRatio: '4/3', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <ApartmentPlan rooms={apt.rooms} />
+          <div style={{ position: 'relative', background: '#0A1220', border: '1px solid var(--line)', borderRadius: 18, overflow: 'hidden', aspectRatio: '4/3' }}>
+            <Image src="/img/plan-1.png" alt={`${apt.roomsLabel} planirovka`} fill sizes="(max-width:820px) 100vw, 55vw" style={{ objectFit: 'contain', padding: 10 }} />
+            <span style={{ position: 'absolute', left: 12, top: 12, background: 'rgba(255,255,255,.9)', color: 'var(--ink)', fontSize: 12, fontWeight: 700, padding: '5px 11px', borderRadius: 20 }}>Planirovka · {apt.area} m²</span>
           </div>
           <div style={{ marginTop: 20, background: '#fff', border: '1px solid var(--line)', borderRadius: 16, padding: 18 }}>
             <div style={{ fontWeight: 700, fontSize: 15, color: 'var(--ink)', marginBottom: 12 }}>Qavatdagi o‘rni</div>
@@ -164,18 +166,3 @@ function Range({ label, value, min, max, step, v, onChange, last }: { label: str
   );
 }
 
-// A lightweight schematic floor plan (the design used an image slot).
-function ApartmentPlan({ rooms }: { rooms: number }) {
-  const n = Math.max(1, rooms + 1);
-  return (
-    <svg viewBox="0 0 200 150" style={{ width: '78%', height: '78%' }} fill="none" stroke="var(--slate)" strokeWidth={1.5}>
-      <rect x="6" y="6" width="188" height="138" rx="4" fill="#fff" />
-      <line x1="100" y1="6" x2="100" y2="144" />
-      <line x1="6" y1="75" x2="100" y2="75" />
-      {n > 2 && <line x1="100" y1="60" x2="194" y2="60" />}
-      {n > 3 && <line x1="100" y1="100" x2="194" y2="100" />}
-      <rect x="150" y="6" width="44" height="18" fill="var(--blue-050)" stroke="var(--blue-100)" />
-      <text x="100" y="150" textAnchor="middle" fontSize="9" fill="var(--mute)" stroke="none">Planirovka sxemasi</text>
-    </svg>
-  );
-}

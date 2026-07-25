@@ -167,8 +167,14 @@ export default function Chess({ projectId, embedded = false }: { projectId: stri
               <QuickSelect label="Blok" value={effBlock} options={(p.blocks || []).map((b) => [b, `Blok ${b}`])} onChange={(v) => nav(`blok=${v}&podyezd=1`)} />
               <QuickSelect label="Pod‘yezd" value={String(effEnt)} options={Array.from({ length: p.entrances }, (_, i) => [String(i + 1), `${i + 1}-pod‘yezd`])} onChange={(v) => selEntrance(+v)} />
               <div style={{ display: 'flex', border: '1px solid var(--line)', borderRadius: 10, overflow: 'hidden' }}>
-                <button onClick={() => actions.setChessView('grid')} style={viewBtn(state.chessView === 'grid')}>▦ Shaxmatka</button>
-                <button onClick={() => actions.setChessView('list')} style={viewBtn(state.chessView === 'list')}>☰ Ro‘yxat</button>
+                <button onClick={() => actions.setChessView('grid')} style={viewBtn(state.chessView === 'grid')}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="7" height="7" rx="1" /><rect x="14" y="3" width="7" height="7" rx="1" /><rect x="3" y="14" width="7" height="7" rx="1" /><rect x="14" y="14" width="7" height="7" rx="1" /></svg>
+                  Shaxmatka
+                </button>
+                <button onClick={() => actions.setChessView('list')} style={viewBtn(state.chessView === 'list')}>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><line x1="8" y1="6" x2="21" y2="6" /><line x1="8" y1="12" x2="21" y2="12" /><line x1="8" y1="18" x2="21" y2="18" /><line x1="3.5" y1="6" x2="3.51" y2="6" /><line x1="3.5" y1="12" x2="3.51" y2="12" /><line x1="3.5" y1="18" x2="3.51" y2="18" /></svg>
+                  Ro‘yxat
+                </button>
               </div>
             </div>
           </div>
@@ -216,7 +222,8 @@ export default function Chess({ projectId, embedded = false }: { projectId: stri
 
           {/* mobile filter trigger */}
           <button className="mk-filter-fab" onClick={() => setSheet(true)}>
-            ⚙ Filtr{activeFilterCount ? ` (${activeFilterCount})` : ''}
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 4.5h18l-7 8.2V19l-4 2v-8.3z" /></svg>
+            Filtr{activeFilterCount ? ` (${activeFilterCount})` : ''}
           </button>
 
           {/* mobile bottom sheet */}
@@ -716,7 +723,7 @@ function EmptyState({ onReset }: { onReset: () => void }) {
 const label: CSSProperties = { fontSize: 13, fontWeight: 600, color: 'var(--slate)', marginBottom: 10 };
 const hc: CSSProperties = { fontWeight: 700, color: 'var(--slate)', fontSize: 12.5 };
 function viewBtn(on: boolean): CSSProperties {
-  return { border: 'none', background: on ? 'var(--blue)' : '#fff', color: on ? '#fff' : 'var(--slate)', fontSize: 13, fontWeight: 600, padding: '9px 14px', cursor: 'pointer' };
+  return { display: 'inline-flex', alignItems: 'center', gap: 7, border: 'none', background: on ? 'var(--blue)' : '#fff', color: on ? '#fff' : 'var(--slate)', fontSize: 13, fontWeight: 600, padding: '9px 14px', cursor: 'pointer' };
 }
 function Legend({ color, bg, label }: { color: string; bg: string; label: string }) {
   return <span style={{ display: 'flex', alignItems: 'center', gap: 6 }}><span style={{ width: 12, height: 12, borderRadius: '50%', background: color }} /><span style={{ color: 'var(--slate)' }}>{label}</span></span>;
