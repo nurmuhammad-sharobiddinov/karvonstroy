@@ -44,7 +44,6 @@ export default function Project({ project: p }: { project: ProjectType }) {
           </div>
         ))}
         <div style={{ position: 'absolute', right: 'clamp(12px,3vw,24px)', bottom: 'clamp(12px,3vw,20px)', display: 'flex', alignItems: 'center', gap: 8 }}>
-          <button onClick={() => actions.showToast('Fotogalereya ochilmoqda')} style={{ border: 'none', background: 'rgba(15,24,38,.72)', color: '#fff', fontSize: 13, fontWeight: 600, padding: '10px 14px', borderRadius: 11, cursor: 'pointer', backdropFilter: 'blur(6px)', display: 'flex', alignItems: 'center', gap: 7 }}>▦ {g.length} ta surat</button>
           <button onClick={() => setPj((v) => (v - 1 + g.length) % g.length)} style={pjBtn}>‹</button>
           <button onClick={() => setPj((v) => (v + 1) % g.length)} style={pjBtn}>›</button>
         </div>
