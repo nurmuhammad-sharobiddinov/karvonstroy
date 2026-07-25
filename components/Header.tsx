@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useApp } from '@/store/AppContext';
 import { routes } from '@/lib/routes';
+import PhoneIcon from './PhoneIcon';
 
 // Sticky header: utility bar (city, phone, favourites, login) + main nav +
 // mobile hamburger. All links are real routes.
@@ -34,7 +35,7 @@ export default function Header() {
               ♥ <span style={{ color: 'var(--slate)' }}>Sevimlilar ({state.favorites.length})</span>
             </span>
           )}
-          <a href="tel:1360" style={{ fontFamily: 'var(--font-manrope)', fontWeight: 700, color: 'var(--ink)', fontSize: 15 }}>☎ 1360</a>
+          <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 6, fontFamily: 'var(--font-manrope)', fontWeight: 700, color: 'var(--ink)', fontSize: 15 }}><span style={{ color: 'var(--blue)' }}><PhoneIcon size={15} /></span>1360</a>
           <Link href={routes.online()} style={{ border: '1px solid var(--line)', background: '#fff', color: 'var(--ink)', fontSize: 13, fontWeight: 600, padding: '7px 14px', borderRadius: 8 }}>
             Kirish
           </Link>

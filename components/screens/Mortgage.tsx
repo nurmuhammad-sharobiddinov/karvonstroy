@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useApp } from '@/store/AppContext';
 import { BANKS } from '@/lib/data';
 import { mortMonthly, fmt } from '@/lib/chess';
+import PhoneIcon from '../PhoneIcon';
 
 const lowestBank = () => BANKS.reduce((a, b) => (b.rateNum < a.rateNum ? b : a));
 
@@ -148,7 +149,7 @@ export default function Mortgage() {
 
           <div style={{ background: 'var(--blue-050)', border: '1px solid var(--blue-100)', borderRadius: 18, padding: 22 }}>
             <div style={{ fontSize: 13.5, color: 'var(--slate)', marginBottom: 4 }}>Savollaringiz bormi?</div>
-            <a href="tel:1360" style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 26, color: 'var(--blue)', textDecoration: 'none', letterSpacing: '-.01em' }}>☎ 1360</a>
+            <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 26, color: 'var(--blue)', textDecoration: 'none', letterSpacing: '-.01em' }}><PhoneIcon size={22} />1360</a>
             <div style={{ fontSize: 12.5, color: 'var(--mute)', marginTop: 6 }}>Har kuni 9:00 – 20:00 · qo‘ng‘iroq bepul</div>
           </div>
         </aside>

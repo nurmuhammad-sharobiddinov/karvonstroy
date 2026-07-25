@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { routes } from '@/lib/routes';
+import PhoneIcon from './PhoneIcon';
 
 export default function Footer() {
   const link = { color: 'rgba(255,255,255,.6)', textAlign: 'left' as const, fontSize: 14 };
@@ -23,7 +24,7 @@ export default function Footer() {
             <span style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 20, color: '#fff' }}>KARVON STROY</span>
           </div>
           <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(255,255,255,.5)', maxWidth: '34ch', margin: '0 0 18px' }}>Zamonaviy turar-joy majmualari quruvchisi. Ishonch, sifat va muddat.</p>
-          <div style={{ fontFamily: 'var(--font-manrope)', fontWeight: 700, fontSize: 22, color: '#fff' }}>☎ 1360</div>
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, fontFamily: 'var(--font-manrope)', fontWeight: 700, fontSize: 22, color: '#fff' }}><PhoneIcon size={20} />1360</div>
         </div>
 
         <div>

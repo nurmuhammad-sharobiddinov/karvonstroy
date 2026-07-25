@@ -22,7 +22,6 @@ import DualRange from '../DualRange';
 
 const COLS = ['Studiya', '1x', '2x', '3x', '2x'];
 const ROOM_OPTS: [number, string][] = [[0, 'Studiya'], [1, '1x'], [2, '2x'], [3, '3x'], [4, '4x+']];
-const BLOCK_HEIGHTS = [230, 300, 200, 265, 320];
 
 export default function Chess({ projectId, embedded = false }: { projectId: string; embedded?: boolean }) {
   const { state, actions } = useApp();
@@ -330,66 +329,59 @@ function Breadcrumb({ p, step, block, entrance, onProject, onBackA, onBackB }: a
   );
 }
 
-/* ============================ STEP A — GENPLAN ============================ */
+/* ============================ STEP A — BLOK TANLASH ============================ */
 function StepA({ p, totalFree, onPick }: { p: any; totalFree: number; onPick: (b: string) => void }) {
-  const blocks = (p.blocks || []).map((b: string, i: number) => ({ name: b, free: blockFree(p, b), h: BLOCK_HEIGHTS[i % BLOCK_HEIGHTS.length] }));
+  const blocks = (p.blocks || []).map((b: string) => ({ name: b, free: blockFree(p, b) }));
   return (
     <div>
       <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'flex-end', justifyContent: 'space-between', gap: 12, marginBottom: 8 }}>
         <h2 style={{ fontWeight: 800, fontSize: 'clamp(22px,2.8vw,34px)', margin: 0, color: 'var(--ink)' }}>Blokni tanlang</h2>
         <div style={{ fontSize: 14, color: 'var(--slate)' }}>Jami bo‘sh: <b style={{ color: 'var(--free)' }}>{totalFree} ta</b></div>
       </div>
-      <p style={{ fontSize: 15, color: 'var(--slate)', margin: '0 0 22px' }}>Yuqoridan ko‘rinishdagi bosh rejada blokka bosing.</p>
-      <div style={{ position: 'relative', background: 'linear-gradient(160deg,#EAF0E6,#DCE7EF)', border: '1px solid var(--line)', borderRadius: 20, padding: 'clamp(24px,4vw,54px)', minHeight: 400, overflow: 'hidden' }}>
-        {/* grid + landscape contours */}
-        <div style={{ position: 'absolute', inset: 0, opacity: 0.5, background: 'repeating-linear-gradient(90deg,transparent,transparent 38px,rgba(15,24,38,.04) 39px),repeating-linear-gradient(0deg,transparent,transparent 38px,rgba(15,24,38,.04) 39px)' }} />
-        <div style={{ position: 'absolute', left: '6%', bottom: '9%', width: '40%', height: 16, background: '#C9D2CB', borderRadius: 8 }} />
-        <div style={{ position: 'absolute', right: '8%', top: '14%', width: 90, height: 90, borderRadius: '50%', background: 'rgba(23,178,106,.14)', border: '1px dashed rgba(23,178,106,.4)' }} />
-        <div style={{ position: 'absolute', left: '46%', top: '10%', width: 60, height: 60, borderRadius: '50%', background: 'rgba(23,178,106,.12)' }} />
-        <div className="mk-genplan" style={{ position: 'relative', display: 'flex', flexWrap: 'wrap', gap: 'clamp(18px,3vw,44px)', alignItems: 'flex-end', justifyContent: 'center', minHeight: 340 }}>
-          {blocks.map((b: any) => {
-            const dead = b.free === 0;
-            return (
-              <button
-                key={b.name}
-                className={dead ? 'mk-block-dead' : 'mk-block'}
-                disabled={dead}
-                onClick={() => !dead && onPick(b.name)}
-                aria-label={`Blok ${b.name}, ${b.free} ta bo‘sh`}
-                style={{
-                  display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'flex-end', gap: 4,
-                  width: 'clamp(104px,14vw,144px)', height: b.h, paddingBottom: 18, border: 'none', borderRadius: '14px 14px 6px 6px',
-                  background: dead ? 'linear-gradient(180deg,#B9C0CC,#9AA1AD)' : 'linear-gradient(180deg,#4E86FF,#0060FE)',
-                  cursor: dead ? 'not-allowed' : 'pointer', opacity: dead ? 0.7 : 1, transition: 'all .25s ease',
-                  boxShadow: dead ? 'none' : '0 10px 30px rgba(0,96,254,.2)',
-                }}
-              >
-                <span style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 'clamp(28px,4vw,48px)', color: '#fff' }}>{b.name}</span>
-                <span style={{ fontSize: 12, color: 'rgba(255,255,255,.85)' }}>Blok · {p.floors} qavat</span>
-                <span style={{ marginTop: 10, background: '#fff', color: dead ? 'var(--sold)' : 'var(--free)', fontSize: 13, fontWeight: 700, padding: '6px 12px', borderRadius: 20 }}>{dead ? 'Sotilgan' : `${b.free} ta bo‘sh`}</span>
-              </button>
-            );
-          })}
-        </div>
-        <div style={{ position: 'absolute', right: 18, top: 16, background: 'rgba(255,255,255,.85)', borderRadius: 10, padding: '8px 12px', fontSize: 12, color: 'var(--slate)' }}>🧭 Yuqoridan ko‘rinish</div>
+      <p style={{ fontSize: 15, color: 'var(--slate)', margin: '0 0 22px' }}>Blokni tanlang — so‘ng pod‘yezd va kvartirani ko‘rasiz.</p>
+      <div className="mk-blockgrid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(min(100%,230px),1fr))', gap: 'clamp(12px,1.6vw,18px)' }}>
+        {blocks.map((b: any) => {
+          const dead = b.free === 0;
+          return (
+            <button
+              key={b.name}
+              className={dead ? 'mk-bcard-dead' : 'mk-bcard'}
+              disabled={dead}
+              onClick={() => !dead && onPick(b.name)}
+              aria-label={`Blok ${b.name}, ${dead ? 'sotilgan' : b.free + ' ta bo‘sh'}`}
+              style={{
+                position: 'relative', textAlign: 'left', background: '#fff',
+                border: '1.5px solid var(--line)', borderRadius: 18, padding: 'clamp(18px,2.4vw,24px)',
+                cursor: dead ? 'not-allowed' : 'pointer', opacity: dead ? 0.65 : 1, transition: 'all .2s ease',
+              }}
+            >
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 18 }}>
+                <span style={{ display: 'inline-flex', alignItems: 'center', justifyContent: 'center', width: 46, height: 46, borderRadius: 12, background: dead ? 'var(--soft)' : 'var(--blue-050)', color: dead ? 'var(--mute)' : 'var(--blue)' }}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="4" y="2.5" width="16" height="19" rx="1.5" />
+                    <path d="M9 21.5v-4.5h6v4.5" />
+                    <path d="M8 6.5h.01M12 6.5h.01M16 6.5h.01M8 10.5h.01M12 10.5h.01M16 10.5h.01M8 14.5h.01M12 14.5h.01M16 14.5h.01" />
+                  </svg>
+                </span>
+                <span style={{ background: dead ? 'var(--soft)' : 'var(--free-bg)', color: dead ? 'var(--sold)' : 'var(--free)', fontSize: 12.5, fontWeight: 700, padding: '6px 12px', borderRadius: 20, whiteSpace: 'nowrap' }}>{dead ? 'Sotilgan' : `${b.free} ta bo‘sh`}</span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'baseline', gap: 8 }}>
+                <span style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 'clamp(36px,5vw,52px)', color: dead ? 'var(--mute)' : 'var(--ink)', lineHeight: 1 }}>{b.name}</span>
+                <span style={{ fontSize: 14, color: 'var(--slate)' }}>blok</span>
+              </div>
+              <div style={{ fontSize: 13.5, color: 'var(--slate)', marginTop: 6 }}>{p.floors} qavat · {p.entrances} pod‘yezd</div>
+              <div style={{ marginTop: 16, paddingTop: 14, borderTop: '1px solid var(--line)', fontSize: 14, fontWeight: 600, color: dead ? 'var(--mute)' : 'var(--blue)' }}>
+                {dead ? 'Mavjud emas' : 'Kvartiralarni ko‘rish'}
+              </div>
+            </button>
+          );
+        })}
       </div>
       <style jsx>{`
-        .mk-block:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 16px 40px rgba(0, 96, 254, 0.3) !important;
-          filter: brightness(1.06);
-        }
-        @media (max-width: 560px) {
-          .mk-genplan {
-            gap: 12px !important;
-            min-height: 0 !important;
-            align-items: stretch !important;
-          }
-          .mk-block,
-          .mk-block-dead {
-            width: clamp(130px, 43vw, 170px) !important;
-            height: 158px !important;
-          }
+        .mk-bcard:hover {
+          border-color: var(--blue) !important;
+          box-shadow: 0 14px 36px rgba(0, 96, 254, 0.14);
+          transform: translateY(-3px);
         }
       `}</style>
     </div>

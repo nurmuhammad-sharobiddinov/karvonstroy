@@ -1,11 +1,13 @@
 'use client';
 
 import { useEffect, useMemo } from 'react';
+import type { ReactNode } from 'react';
 import Image from 'next/image';
 import { useApp } from '@/store/AppContext';
 import { PROJECTS, PROJECT_IMG, HERO_SLIDES, NEWS } from '@/lib/data';
 import { projStatusColor, projTotalFree, genFloors } from '@/lib/chess';
 import MapEmbed from '../MapEmbed';
+import PhoneIcon from '../PhoneIcon';
 
 const chip = (active: boolean) =>
   ({
@@ -222,7 +224,7 @@ export default function Home() {
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'rgba(255,255,255,.7)', margin: '0 0 26px', maxWidth: '44ch' }}>Mutaxassislarimiz sizga eng mos kvartirani tanlashda yordam beradi. Har kuni 9:00–19:00.</p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
               <ContactRow icon="◉" title="Bosh ofis" text="Qarshi, Qashqadaryo, O‘zbekiston ko‘chasi (VQ6M+FVH)" />
-              <ContactRow icon="☎" title="Call-markaz" text="1360 · +998 71 200 13 60" />
+              <ContactRow icon={<PhoneIcon size={16} />} title="Call-markaz" text="1360 · +998 71 200 13 60" />
             </div>
             <button onClick={() => actions.showToast('Qo‘ng‘iroq uchun ariza qabul qilindi')} style={{ marginTop: 26, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>Qo‘ng‘iroqqa buyurtma</button>
           </div>
@@ -302,7 +304,7 @@ function StatCell({ n, label }: { n: React.ReactNode; label: string }) {
     </div>
   );
 }
-function ContactRow({ icon, title, text }: { icon: string; title: string; text: string }) {
+function ContactRow({ icon, title, text }: { icon: ReactNode; title: string; text: string }) {
   return (
     <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
       <span style={{ color: 'var(--blue)' }}>{icon}</span>

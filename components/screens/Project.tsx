@@ -8,6 +8,7 @@ import { projStatusColor, projTotalFree } from '@/lib/chess';
 import Icon from '../Icon';
 import MapEmbed from '../MapEmbed';
 import Chess from './Chess';
+import PhoneIcon from '../PhoneIcon';
 
 // Loyiha galereyasi — faqat toza bino renderlari (promo poster EMAS)
 const gallery = (pid: string) => [PROJECT_IMG[pid], HERO_SLIDES[0], HERO_SLIDES[3]];
@@ -132,7 +133,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
           </div>
           <div style={{ marginTop: 20, padding: 14, background: 'var(--blue-050)', borderRadius: 12, textAlign: 'center' }}>
             <div style={{ fontSize: 13, color: 'var(--slate)', marginBottom: 4 }}>Savollaringiz bormi?</div>
-            <a href="tel:1360" style={{ fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 22, color: 'var(--blue)' }}>☎ 1360</a>
+            <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 7, fontFamily: 'var(--font-manrope)', fontWeight: 800, fontSize: 22, color: 'var(--blue)' }}><PhoneIcon size={19} />1360</a>
           </div>
         </aside>
       </div>
@@ -177,7 +178,7 @@ export default function Project({ project: p }: { project: ProjectType }) {
           <div>
             <h3 style={{ fontWeight: 800, fontSize: 'clamp(24px,3vw,38px)', margin: '0 0 16px' }}>Sotuv ofisiga tashrif buyuring</h3>
             <p style={{ fontSize: 16, lineHeight: 1.7, color: 'rgba(255,255,255,.7)', margin: '0 0 26px', maxWidth: '44ch' }}>{p.name} bo‘yicha barcha savollaringizga menejerlarimiz javob beradi. Har kuni 9:00–19:00.</p>
-            <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}>☎ 1360 — qo‘ng‘iroq qiling</a>
+            <a href="tel:1360" style={{ display: 'inline-flex', alignItems: 'center', gap: 9, border: 'none', background: 'var(--blue)', color: '#fff', fontSize: 15, fontWeight: 600, padding: '14px 26px', borderRadius: 11, cursor: 'pointer' }}><PhoneIcon size={17} />1360 — qo‘ng‘iroq qiling</a>
           </div>
           <div style={{ position: 'relative', borderRadius: 18, overflow: 'hidden', aspectRatio: '16/11', border: '1px solid rgba(255,255,255,.12)', background: '#0f1826' }}>
             <MapEmbed dark />
