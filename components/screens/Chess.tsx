@@ -395,12 +395,15 @@ function StepB({ p, block, onPick, onBack }: { p: any; block: string; onPick: (e
       <h2 style={{ fontWeight: 800, fontSize: 'clamp(22px,2.8vw,34px)', margin: '0 0 6px', color: 'var(--ink)' }}>Pod‘yezdni tanlang · Blok {block}</h2>
       <p style={{ fontSize: 15, color: 'var(--slate)', margin: '0 0 22px' }}>Fasaddagi yorug‘ oynalar — bo‘sh kvartiralar. Kirishni tanlang.</p>
       <div className="mk-stack" style={{ display: 'grid', gridTemplateColumns: 'minmax(0,1.5fr) minmax(220px,1fr)', gap: 24, alignItems: 'center' }}>
-        <div style={{ background: 'linear-gradient(180deg,#0E1B33,#132546)', border: '1px solid var(--line)', borderRadius: 20, padding: 'clamp(20px,3vw,38px)' }}>
-          <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(10px,2vw,22px)' }}>
+        <div style={{ background: 'linear-gradient(180deg,#0E1B33,#132546)', border: '1px solid var(--line)', borderRadius: 20, padding: 'clamp(18px,3vw,34px)' }}>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: 'clamp(16px,3vw,30px)', flexWrap: 'wrap' }}>
             {Array.from({ length: p.entrances }, (_, e) => {
               const erows = genFloors(p, block, e + 1); // real per-entrance availability
+              const free = entranceFree(p, block, e + 1);
               return (
-                <div key={e} style={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
+                <div key={e} className="mk-ent-tower" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, background: 'rgba(255,255,255,.05)', border: '1px solid rgba(255,255,255,.14)', borderRadius: 14, padding: '12px 14px 14px' }}>
+                  {/* tom qismi — har pod'yezd alohida "minora" ko'rinishi uchun */}
+                  <div style={{ width: '72%', height: 6, borderRadius: 4, background: 'rgba(255,255,255,.22)' }} />
                   <div style={{ display: 'flex', flexDirection: 'column-reverse', gap: 4 }}>
                     {erows.map((row, fi) => (
                       <div key={fi} style={{ display: 'flex', gap: 4 }}>
@@ -412,7 +415,8 @@ function StepB({ p, block, onPick, onBack }: { p: any; block: string; onPick: (e
                       </div>
                     ))}
                   </div>
-                  <button onClick={() => onPick(e + 1)} className="mk-ent-btn" style={{ marginTop: 8, border: '1px solid rgba(255,255,255,.2)', background: 'rgba(255,255,255,.08)', color: '#fff', borderRadius: 8, fontSize: 12, fontWeight: 700, padding: '8px 4px', cursor: 'pointer', transition: 'all .2s ease' }}>{e + 1}</button>
+                  <button onClick={() => onPick(e + 1)} className="mk-ent-btn" style={{ marginTop: 2, width: '100%', border: '1px solid rgba(255,255,255,.24)', background: 'rgba(255,255,255,.1)', color: '#fff', borderRadius: 9, fontSize: 12.5, fontWeight: 700, padding: '9px 10px', cursor: 'pointer', transition: 'all .2s ease', whiteSpace: 'nowrap' }}>{e + 1}-pod‘yezd</button>
+                  <span style={{ fontSize: 11.5, color: 'rgba(255,255,255,.6)' }}>{free} ta bo‘sh</span>
                 </div>
               );
             })}
@@ -430,6 +434,8 @@ function StepB({ p, block, onPick, onBack }: { p: any; block: string; onPick: (e
         </div>
       </div>
       <style jsx>{`
+        .mk-ent-tower { transition: all .2s ease; }
+        .mk-ent-tower:hover { border-color: rgba(255, 255, 255, 0.42) !important; background: rgba(255, 255, 255, 0.09) !important; }
         .mk-ent-btn:hover { background: var(--blue) !important; border-color: var(--blue) !important; }
         .mk-entrow:hover { border-color: var(--blue); box-shadow: var(--shadow-sm); }
         @media (max-width: 780px) { .mk-stack { grid-template-columns: 1fr !important; } }
