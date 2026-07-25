@@ -42,14 +42,23 @@ export default function Catalog() {
       </div>
       <h1 style={{ fontWeight: 800, fontSize: 'clamp(26px,3.4vw,42px)', letterSpacing: '-.02em', margin: '0 0 22px', color: 'var(--ink)' }}>Loyihalar katalogi</h1>
 
-      <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap', alignItems: 'center', background: 'var(--soft)', border: '1px solid var(--line)', borderRadius: 16, padding: 14, marginBottom: 24 }}>
-        {classOpts.map(([v, l]) => (
-          <button key={v} onClick={() => actions.set({ catCls: v })} style={chip(state.catCls === v)}>{l}</button>
-        ))}
-        <span style={{ width: 1, height: 26, background: 'var(--line)', margin: '0 4px' }} />
-        {statusOpts.map(([v, l]) => (
-          <button key={v} onClick={() => actions.set({ catStatus: v })} style={chip(state.catStatus === v)}>{l}</button>
-        ))}
+      <div style={{ background: 'var(--soft)', border: '1px solid var(--line)', borderRadius: 16, padding: 14, marginBottom: 24, display: 'flex', flexDirection: 'column', gap: 12 }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--slate)', whiteSpace: 'nowrap', minWidth: 46 }}>Klass:</span>
+          <div className="mk-chiprow" style={{ flex: 1, minWidth: 0 }}>
+            {classOpts.map(([v, l]) => (
+              <button key={v} onClick={() => actions.set({ catCls: v })} style={chip(state.catCls === v)}>{l}</button>
+            ))}
+          </div>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span style={{ fontSize: 13, fontWeight: 600, color: 'var(--slate)', whiteSpace: 'nowrap', minWidth: 46 }}>Holat:</span>
+          <div className="mk-chiprow" style={{ flex: 1, minWidth: 0 }}>
+            {statusOpts.map(([v, l]) => (
+              <button key={v} onClick={() => actions.set({ catStatus: v })} style={chip(state.catStatus === v)}>{l}</button>
+            ))}
+          </div>
+        </div>
       </div>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill,minmax(min(100%,300px),1fr))', gap: 20 }}>
@@ -78,6 +87,17 @@ export default function Catalog() {
 
       <style jsx>{`
         .mk-catcard:hover { box-shadow: var(--shadow); transform: translateY(-3px); border-color: var(--blue-100); }
+        .mk-chiprow {
+          display: flex;
+          gap: 8px;
+          overflow-x: auto;
+          flex-wrap: nowrap;
+          scrollbar-width: none;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 2px;
+        }
+        .mk-chiprow::-webkit-scrollbar { display: none; }
+        .mk-chiprow > button { flex: 0 0 auto; white-space: nowrap; }
       `}</style>
     </section>
   );
